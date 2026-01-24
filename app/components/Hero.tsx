@@ -30,77 +30,91 @@ export default function Hero() {
           className="mb-8"
         >
           <div className="relative">
-            <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-purple-500/30 dark:border-purple-400/30 shadow-2xl shadow-purple-500/20 dark:shadow-purple-500/30 ring-4 ring-purple-500/10 dark:ring-purple-400/10 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
+            <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border border-neutral-300/50 dark:border-neutral-700/50 shadow-sm bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center">
               {!imageError ? (
                 <Image
                   src="/profile.jpg"
                   alt="Karuna Vasu"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-contain"
+                  style={{ 
+                    objectPosition: 'center center',
+                    width: '100%',
+                    height: '100%'
+                  }}
                   onError={() => setImageError(true)}
                   onLoad={() => setImageError(false)}
                   priority
                   unoptimized
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-white text-4xl md:text-5xl lg:text-6xl font-bold">
+                <div className="w-full h-full bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center text-neutral-400 dark:text-neutral-500 text-xl md:text-2xl font-medium">
                   KV
                 </div>
               )}
             </div>
-            {/* Animated ring effect */}
-            <div className="absolute inset-0 rounded-full border-4 border-purple-500/20 animate-ping pointer-events-none"></div>
           </div>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-sm md:text-base uppercase tracking-wider text-neutral-500 dark:text-neutral-500 mb-4 font-medium"
-        >
-          Welcome to my portfolio
-        </motion.p>
-        
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-tight"
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-3 leading-tight"
         >
-          Hi, I'm{" "}
           <span className="gradient-text bg-clip-text text-transparent">
-            Karuna
+            Karuna Vasu
           </span>
         </motion.h1>
+        
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="text-xl md:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-300 mb-2 font-semibold"
+        >
+          Full-Stack Python Developer
+        </motion.p>
         
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-sm md:text-base text-neutral-500 dark:text-neutral-500 mb-6"
+          className="text-base md:text-lg text-neutral-500 dark:text-neutral-400 mb-8 font-medium"
         >
-          She/Her
-        </motion.p>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-xl md:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-300 mb-8 font-medium"
-        >
-          Full stack developer
+          Automation Platforms • AI Workflows • US Healthcare RCM
         </motion.p>
         
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed mb-12"
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed mb-8"
         >
-          Versatile Python developer with 3+ years of experience designing automation systems, deploying machine learning solutions, and building scalable APIs and microservices in cloud-native environments.
+          I build automation-first systems and orchestration platforms that ship real business outcomes.
         </motion.p>
+
+        {/* Proof Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="flex flex-wrap justify-center gap-3 mb-12"
+        >
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
+            US Healthcare RCM
+          </span>
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
+            EV / Auth / Claims Automation
+          </span>
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
+            Bot Orchestration Platform
+          </span>
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
+            AI-assisted IVR Workflows
+          </span>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

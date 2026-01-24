@@ -32,7 +32,7 @@ export default function ResumePage() {
             ← Back to Portfolio
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold mb-1 print:text-2xl">Karuna Vasu</h1>
-          <p className="text-lg md:text-xl text-white/90 mb-4 print:text-base">Python Developer | AI/ML Specialist | Full-Stack Developer</p>
+          <p className="text-lg md:text-xl text-white/90 mb-4 print:text-base">Python Developer | Automation & Platform Engineering | Full-Stack</p>
           
           <div className="flex flex-wrap gap-3 md:gap-4 text-xs md:text-sm print:text-xs">
             <div className="flex items-center gap-1">
@@ -71,7 +71,7 @@ export default function ResumePage() {
                 Professional Summary
               </h2>
               <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed print:text-xs">
-                Results-driven Python Developer with 3+ years of experience designing automation systems, deploying machine learning solutions, and building scalable APIs and microservices in cloud-native environments. Proven track record in reducing processing time by up to 95% and improving system performance by up to 40% through efficient backend design, test automation, and database optimization. Expert in AI/ML integration, LLM-powered automation, healthcare RCM systems, and intelligent workflow orchestration. Specialized in building production-grade bot management platforms and AI-driven IVR systems.
+                Full-Stack Python Developer with 2+ years of experience building automation platforms and orchestration tools for US Healthcare (RCM). Proven track record in reducing processing time by up to 95% and improving system performance by up to 40% through efficient backend design, test automation, and database optimization. Expert in automation-first systems, LLM-powered workflows, healthcare RCM operations, and intelligent bot orchestration. Specialized in building production-grade bot management platforms and AI-assisted IVR systems.
               </p>
             </section>
 
@@ -98,23 +98,27 @@ export default function ResumePage() {
                   <ul className="space-y-1 text-sm text-neutral-700 dark:text-neutral-300 print:text-xs print:space-y-0.5">
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Engineered Python automation at <strong>Availity</strong>, reducing claims processing time by <strong className="text-green-600 dark:text-green-400">95%</strong></span>
+                      <span>Built and maintained automation-first workflows for US healthcare RCM operations (EV/Auth/Claims), improving turnaround time and reducing manual effort</span>
                     </li>
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Achieved <strong className="text-green-600 dark:text-green-400">30% boost</strong> in operational performance and <strong className="text-green-600 dark:text-green-400">40% improvement</strong> in system reliability</span>
+                      <span>Engineered Python automation pipelines integrated with <strong>Availity</strong>, reducing claim processing turnaround by <strong className="text-green-600 dark:text-green-400">95%</strong> and enabling faster high-volume execution</span>
                     </li>
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Designed workflows for <strong>Practice Fusion</strong> EHR, improving efficiency by <strong className="text-green-600 dark:text-green-400">40%</strong></span>
+                      <span>Developed backend microservices + orchestration logic to improve system reliability by <strong className="text-green-600 dark:text-green-400">~40%</strong>, focusing on stability, retries, and scalable execution patterns</span>
                     </li>
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Built <strong>Bot Manager & Orchestration Platform</strong> and <strong>AI-Powered IVR System</strong> using LLMs</span>
+                      <span>Contributed to building a <strong>Bot Manager / Orchestrator platform</strong> to schedule, monitor, and scale multiple automation bots with process-wise and user-wise visibility</span>
                     </li>
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Cut manual testing time by <strong className="text-green-600 dark:text-green-400">80%</strong> through automated test scripts</span>
+                      <span>Automated EHR workflows (<strong>Practice Fusion</strong>) by designing automation-ready flows and integrations, improving operational efficiency by <strong className="text-green-600 dark:text-green-400">~40%</strong></span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
+                      <span>Reduced regression and verification effort by <strong className="text-green-600 dark:text-green-400">~80%</strong> by implementing reusable test scripts, automation checks, and structured reviews</span>
                     </li>
                   </ul>
                 </div>

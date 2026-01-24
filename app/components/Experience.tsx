@@ -13,10 +13,10 @@ export default function Experience() {
         className="max-w-4xl"
       >
         <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400">
+          <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-[65ch]">
             My professional journey and key achievements
           </p>
         </div>
@@ -62,7 +62,7 @@ export default function Experience() {
                   >
                     <span className="mt-2 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"></span>
                     <span>
-                      Engineered Python automation solutions at <span className="text-neutral-900 dark:text-white font-semibold">Availity</span>, slashing claims processing time by <span className="text-green-600 dark:text-green-400 font-bold">95%</span>, reducing it to 45 minutes for 240 claims
+                      Built and maintained automation-first workflows for US healthcare RCM operations (EV/Auth/Claims), improving turnaround time and reducing manual effort across teams
                     </span>
                   </motion.li>
                   <motion.li
@@ -74,7 +74,7 @@ export default function Experience() {
                   >
                     <span className="mt-2 w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></span>
                     <span>
-                      Achieved a <span className="text-green-600 dark:text-green-400 font-bold">30% boost</span> in operational performance by optimizing data exchange processes for major healthcare providers
+                      Engineered Python orchestration pipelines integrated with <span className="text-neutral-900 dark:text-white font-semibold">Availity</span>, reducing claim processing turnaround by <span className="text-green-600 dark:text-green-400 font-bold">95%</span> and enabling faster high-volume execution
                     </span>
                   </motion.li>
                   <motion.li
@@ -86,7 +86,7 @@ export default function Experience() {
                   >
                     <span className="mt-2 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0"></span>
                     <span>
-                      Developed microservices architecture for claims processing, resulting in <span className="text-green-600 dark:text-green-400 font-bold">40% improvement</span> in system reliability
+                      Designed scalable bot execution patterns with retry handling, logging, and failure recovery, improving production stability and bot success rate
                     </span>
                   </motion.li>
                   <motion.li
@@ -98,7 +98,7 @@ export default function Experience() {
                   >
                     <span className="mt-2 w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
                     <span>
-                      Designed workflows for <span className="text-neutral-900 dark:text-white font-semibold">Practice Fusion</span> EHR platform, improving workflow efficiency by <span className="text-green-600 dark:text-green-400 font-bold">40%</span>
+                      Developed backend microservices + workflow engine logic to improve system reliability by <span className="text-green-600 dark:text-green-400 font-bold">~40%</span>, focusing on stability, retries, and scalable execution patterns
                     </span>
                   </motion.li>
                   <motion.li
@@ -110,7 +110,31 @@ export default function Experience() {
                   >
                     <span className="mt-2 w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0"></span>
                     <span>
-                      Drastically cut manual testing time by <span className="text-green-600 dark:text-green-400 font-bold">80%</span> through efficient test scripts and code reviews
+                      Contributed to building a <span className="text-neutral-900 dark:text-white font-semibold">Bot Manager / Orchestrator platform</span> to schedule, monitor, and scale multiple bots with process-wise and user-wise visibility
+                    </span>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.7, duration: 0.5 }}
+                    className="flex items-start gap-3"
+                  >
+                    <span className="mt-2 w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                    <span>
+                      Automated EHR workflows (<span className="text-neutral-900 dark:text-white font-semibold">Practice Fusion</span>) by designing execution-ready flows and integrations, improving operational efficiency by <span className="text-green-600 dark:text-green-400 font-bold">~40%</span>
+                    </span>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.8, duration: 0.5 }}
+                    className="flex items-start gap-3"
+                  >
+                    <span className="mt-2 w-2 h-2 rounded-full bg-teal-500 flex-shrink-0"></span>
+                    <span>
+                      Reduced regression and verification effort by <span className="text-green-600 dark:text-green-400 font-bold">~80%</span> by implementing reusable test scripts, validation checks, and structured reviews
                     </span>
                   </motion.li>
                 </ul>

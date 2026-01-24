@@ -9,24 +9,22 @@ interface Tech {
 
 const technologies: Tech[] = [
   { name: "Python", icon: "🐍" },
+  { name: "FastAPI", icon: "🚀" },
   { name: "Django", icon: "🎯" },
   { name: "Flask", icon: "🌶️" },
-  { name: "FastAPI", icon: "🚀" },
-  { name: "TensorFlow", icon: "🧠" },
-  { name: "Scikit-learn", icon: "📊" },
+  { name: "Next.js", icon: "▲" },
+  { name: "React", icon: "⚛️" },
   { name: "SQL", icon: "🗄️" },
   { name: "PostgreSQL", icon: "🐘" },
-  { name: "Pandas", icon: "🐼" },
-  { name: "REST APIs", icon: "🔌" },
+  { name: "Selenium", icon: "🤖" },
   { name: "AWS", icon: "☁️" },
   { name: "Docker", icon: "🐳" },
-  { name: "Selenium", icon: "🤖" },
+  { name: "REST APIs", icon: "🔌" },
+  { name: "LLMs", icon: "🤖" },
   { name: "Git", icon: "📦" },
   { name: "CI/CD", icon: "⚙️" },
-  { name: "React", icon: "⚛️" },
-  { name: "Next.js", icon: "▲" },
-  { name: "JavaScript", icon: "📜" },
   { name: "TypeScript", icon: "📘" },
+  { name: "JavaScript", icon: "📜" },
 ];
 
 export default function TechStack() {
@@ -39,10 +37,10 @@ export default function TechStack() {
         transition={{ duration: 0.6 }}
       >
         <div className="mb-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
             Technologies I <span className="gradient-text">Love</span>
           </h2>
-          <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
+          <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-[65ch]">
             Modern tools and frameworks that power my development journey
           </p>
         </div>

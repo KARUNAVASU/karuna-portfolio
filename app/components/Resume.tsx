@@ -40,7 +40,7 @@ export default function Resume() {
                 Karuna Vasu - Resume
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
-                Python Developer | AI/ML Specialist | Full-Stack Developer
+                Python Developer | Automation & Platform Engineering | Full-Stack
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function Resume() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
                 <div className="p-4 rounded-lg bg-neutral-100/50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700">
                   <p className="text-sm text-neutral-500 dark:text-neutral-500 mb-1">Experience</p>
-                  <p className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">3+ Years</p>
+                  <p className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">2+ Years</p>
                 </div>
                 <div className="p-4 rounded-lg bg-neutral-100/50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700">
                   <p className="text-sm text-neutral-500 dark:text-neutral-500 mb-1">Location</p>
