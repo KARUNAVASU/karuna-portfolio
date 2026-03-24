@@ -3,8 +3,10 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
+import KeyAchievements from "./components/KeyAchievements";
 import Resume from "./components/Resume";
 import Publications from "./components/Publications";
+import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Navigation from "./components/Navigation";
 
@@ -16,9 +18,11 @@ export default function Home() {
       <About />
       <Experience />
       <Projects />
+      <KeyAchievements />
       <TechStack />
       <Publications />
       <Resume />
+      <Certifications />
       <Contact />
       <footer className="px-4 sm:px-6 md:px-12 lg:px-24 py-16 border-t border-neutral-200 dark:border-neutral-800/50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-neutral-950"></div>

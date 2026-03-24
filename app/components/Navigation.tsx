@@ -19,9 +19,11 @@ export default function Navigation() {
     { href: "#about", label: "About" },
     { href: "#experience", label: "Work" },
     { href: "#projects", label: "Projects" },
+    { href: "#achievements", label: "Achievements" },
     { href: "#tech-stack", label: "Tech Stack" },
     { href: "#publications", label: "Publications" },
     { href: "/resume", label: "Resume" },
+    { href: "#certifications", label: "Certs" },
     { href: "#contact", label: "Contact" },
   ];
 

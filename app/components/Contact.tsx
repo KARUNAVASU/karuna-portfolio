@@ -9,18 +9,28 @@ export default function Contact() {
       href: "mailto:karunavasu525@gmail.com",
       icon: "✉️",
       gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/KarunaV23",
-      icon: "💻",
-      gradient: "from-gray-500 to-gray-700",
+      subtitle: "karunavasu525@gmail.com",
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/karuna-vasu-506414221",
+      href: "https://www.linkedin.com/in/karuna-vasu-506414221/",
       icon: "💼",
       gradient: "from-blue-600 to-blue-800",
+      subtitle: "Profile & certifications",
+    },
+    {
+      name: "Portfolio",
+      href: "https://karunaportfolio-tau.vercel.app/",
+      icon: "🌐",
+      gradient: "from-purple-500 to-indigo-600",
+      subtitle: "This site",
+    },
+    {
+      name: "GitHub",
+      href: "https://github.com/KARUNAVASU",
+      icon: "💻",
+      gradient: "from-gray-500 to-gray-700",
+      subtitle: "Code & projects",
     },
   ];
 
@@ -43,9 +53,12 @@ export default function Contact() {
           <p className="text-sm md:text-base text-neutral-500 dark:text-neutral-500">
             📍 Mangalore, Karnataka 575003, India
           </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-1">
+            +91 6350545182
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {links.map((link, index) => (
             <motion.a
               key={link.name}
@@ -68,7 +81,7 @@ export default function Contact() {
                 </div>
                 <h3 className="text-base md:text-lg font-semibold text-neutral-900 dark:text-white mb-2">{link.name}</h3>
                 <p className="text-xs md:text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-colors">
-                  {link.name === "Email" ? "karunavasu525@gmail.com" : `Visit my ${link.name}`}
+                  {link.subtitle}
                 </p>
               </div>
               
