@@ -21,17 +21,28 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Bot Manager & Automation Orchestrator",
-    outcome: "Central platform to run, schedule, monitor, and scale Python bots across RCM workflows.",
+    title: "BotVeta — Automation Orchestration Platform",
+    outcome:
+      "Multi-tenant platform to schedule, monitor, and manage distributed automation workflows across organizations.",
     highlights: [
-      "Unified dashboard for multi-bot control (process-wise + user-wise)",
-      "Scheduling, re-runs, execution tracking & visibility",
-      "Built for production scaling (orchestrator-style architecture)"
+      "Orchestration APIs → scheduler → bot runners → centralized logging & monitoring",
+      "Queue-based execution, retries, failure recovery, JWT RBAC, mixed Python/Node backends",
+      "Operator UI (React + Vite) and admin (Next.js); .NET 9 API with Hangfire and SQL Server",
     ],
-    architecture: "Next.js → FastAPI → Bot Runner → SQL Logs/Reports",
-    impact: "~40–60% reduction in manual coordination",
-    role: "Lead developer (design + backend + integration)",
-    tech: ["Python", "FastAPI", "Next.js", "SQL", "AWS"],
+    architecture:
+      "Next.js admin / React-Vite operator → FastAPI & .NET 9 APIs → Hangfire / APScheduler → runners → SQL",
+    impact: "Scalable workflow execution; strong reduction in manual coordination",
+    role: "Backend, integration, and platform features across APIs and UIs",
+    tech: [
+      "Python",
+      "FastAPI",
+      ".NET 9",
+      "React",
+      "Next.js",
+      "Hangfire",
+      "SQL Server",
+      "AWS",
+    ],
     highlight: true,
     icon: "⭐",
     buttons: [
@@ -41,59 +52,77 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "Lite Bot Manager (POC)",
-    outcome: "Lightweight dashboard built to validate orchestration needs before scaling.",
+    title: "AI-Powered PDF Extraction & Document Intelligence",
+    outcome:
+      "Healthcare RCM document pipeline: split, group, validate, and extract structured data from large PDFs using Bedrock.",
     highlights: [
-      "Quick bot launch + basic tracking",
-      "Validated access control + bot grouping + execution flow",
-      "Became the base for the full Bot Manager"
+      "Admin-side upload (e.g. up to ~200MB), patient- and document-type-aware grouping",
+      "FastAPI (uvicorn) + AWS Bedrock; analyze-only mode; confidence-aware validation",
+      "JSON and Excel outputs for EOB, claims, and patient-centric workflows",
     ],
-    impact: "~30–50% faster bot triggering",
-    tech: ["Python", "FastAPI", "React"],
-    icon: "⚙️",
-    buttons: [
-      { label: "Live", href: "http://20.119.86.24:3000/login", type: "Live" },
-    ],
+    architecture: "Next.js admin → FastAPI → AWS Bedrock (Claude) → validation → exports",
+    impact: "Faster document turnaround with auditable, rule-based + AI validation",
+    tech: ["Python", "FastAPI", "AWS Bedrock", "LLMs", "Next.js"],
+    icon: "📄",
   },
   {
-    title: "AI Voice Automation (IVR + LLM)",
-    outcome: "AI-assisted IVR automation that runs insurance calls from Excel data with smart agent handoff.",
+    title: "AI Voice Automation (Amazon Connect + Bedrock)",
+    outcome:
+      "Production IVR automation for payer calls (claims, eligibility, authorization) with AI navigation and agent handoff.",
     highlights: [
-      "LLM handles IVR prompts to reduce agent time",
-      "AI-to-human call handoff when a live rep connects",
-      "Designed for future AI-to-AI verification"
+      "Amazon Connect integrated with Bedrock (Claude 3.5 Sonnet) for conversational IVR",
+      "Python backends on EC2, DynamoDB, Lambda; React dashboards for monitoring and control",
+      "Excel-driven triggers for ops; IAM-aligned secure cloud deployment",
     ],
-    impact: "~50–70% less IVR navigation time",
-    tech: ["Python", "LLMs", "IVR", "APIs", "Cloud"],
+    impact: "~60–80% less manual calling; faster response turnaround",
+    tech: ["Python", "Amazon Connect", "AWS Bedrock", "Lambda", "React"],
     icon: "🤖",
     buttons: [
       { label: "Live", href: "https://ivr.mbsrcm.com/login", type: "Live" },
     ],
   },
   {
-    title: "RCM Automation Suite (EV • Auth • Claims)",
-    outcome: "Built multiple internal workflow engines supporting EV, Prior Auth, and Claims operations at scale.",
+    title: "RCM Automation Suite (Eligibility • Auth • Claims)",
+    outcome:
+      "Rule-based automation engines for eligibility, prior authorization, and claims at high volume.",
     highlights: [
-      "Automated high-volume workflows across multiple RCM processes",
-      "Standardized validations, retries, and execution checks for stability",
-      "Improved consistency, turnaround time, and operational throughput"
+      "Validations, retries, and orchestration patterns standardized across processes",
+      "Improved consistency, throughput, and turnaround across RCM lines of business",
     ],
     impact: "~40–80% reduction in repetitive effort (varies by workflow)",
-    tech: ["Python", "Selenium", "SQL"],
+    tech: ["Python", "Selenium", "Pandas", "SQL"],
     icon: "🏥",
-    buttons: [
-      { label: "Read", href: "/projects/rcm-automation-suite", type: "Read" },
-    ],
   },
 ];
 
 const otherWork: Project[] = [
   {
-    title: "Database Development for Microfluidics",
-    outcome: "Designed a structured database system for storing and managing microfluidics research data efficiently.",
+    title: "Lite Bot Manager (POC)",
+    outcome:
+      "Lightweight dashboard that validated orchestration, access control, and grouping before full BotVeta rollout.",
     highlights: [
-      "Schema design + data management support",
-      "Improved data organization for retrieval and analysis"
+      "Quick bot launch and basic tracking",
+      "Informed scheduling and multi-bot UX for the production platform",
+    ],
+    tech: ["Python", "FastAPI", "React"],
+    icon: "⚙️",
+  },
+  {
+    title: "Slack-Based Workflow Automation",
+    outcome: "Event-driven triggers and monitoring for internal workflows via Slack APIs and webhooks.",
+    highlights: [
+      "Real-time execution signals for automation teams",
+      "API-driven integration with existing bot and pipeline tooling",
+    ],
+    tech: ["Python", "FastAPI", "Slack API"],
+    icon: "💬",
+  },
+  {
+    title: "Database Development for Microfluidics",
+    outcome: "Structured database system for microfluidics research data retrieval and analysis.",
+    highlights: [
+      "Schema design and data management support",
+      "Improved organization for downstream analysis",
     ],
     tech: ["SQL", "Database Design", "Data Management"],
     icon: "🧪",
@@ -129,7 +158,7 @@ export default function Projects() {
               FastAPI + Next.js
             </span>
             <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-xs font-medium">
-              LLM Voice Automation
+              Bedrock &amp; Amazon Connect
             </span>
           </div>
         </div>

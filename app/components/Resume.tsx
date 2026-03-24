@@ -40,20 +40,30 @@ export default function Resume() {
                 Karuna Vasu - Resume
               </h3>
               <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
-                Python Developer | Automation & Platform Engineering | Full-Stack
+                Backend / Platform Engineer | FastAPI | AWS | AI &amp; IVR
               </p>
             </div>
 
-            <Link
-              href="/resume"
-              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <span>👁️</span>
-                <span>View Resume</span>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            </Link>
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/resume"
+                className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-white overflow-hidden transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  <span>👁️</span>
+                  <span>View Resume</span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </Link>
+              <a
+                href="/Karuna_Vasu_Resume.pdf"
+                download="Karuna_Vasu_Resume.pdf"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold border-2 border-neutral-300 dark:border-neutral-700 text-neutral-800 dark:text-neutral-200 hover:border-purple-500/60 dark:hover:border-purple-500/50 hover:bg-neutral-100 dark:hover:bg-neutral-900/50 transition-all"
+              >
+                <span>📥</span>
+                <span>Download PDF</span>
+              </a>
+            </div>
 
             <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
               <p className="text-sm text-neutral-500 dark:text-neutral-600 mb-4">

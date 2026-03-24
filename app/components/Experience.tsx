@@ -41,7 +41,7 @@ export default function Experience() {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-neutral-900 dark:text-white">
-                      Python Developer
+                      Backend / Platform Engineer (Python Developer)
                     </h3>
                     <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 font-medium">
                       Integrity Healthcare Solutions Pvt Ltd
@@ -52,92 +52,139 @@ export default function Experience() {
                   </div>
                 </div>
                 
-                <ul className="space-y-3 text-base md:text-lg text-neutral-700 dark:text-neutral-300">
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"></span>
-                    <span>
-                      Built and maintained automation-first workflows for US healthcare RCM operations (EV/Auth/Claims), improving turnaround time and reducing manual effort across teams
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></span>
-                    <span>
-                      Engineered Python orchestration pipelines integrated with <span className="text-neutral-900 dark:text-white font-semibold">Availity</span>, reducing claim processing turnaround by <span className="text-green-600 dark:text-green-400 font-bold">95%</span> and enabling faster high-volume execution
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0"></span>
-                    <span>
-                      Designed scalable bot execution patterns with retry handling, logging, and failure recovery, improving production stability and bot success rate
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
-                    <span>
-                      Developed backend microservices + workflow engine logic to improve system reliability by <span className="text-green-600 dark:text-green-400 font-bold">~40%</span>, focusing on stability, retries, and scalable execution patterns
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0"></span>
-                    <span>
-                      Contributed to building a <span className="text-neutral-900 dark:text-white font-semibold">Bot Manager / Orchestrator platform</span> to schedule, monitor, and scale multiple bots with process-wise and user-wise visibility
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.7, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"></span>
-                    <span>
-                      Automated EHR workflows (<span className="text-neutral-900 dark:text-white font-semibold">Practice Fusion</span>) by designing execution-ready flows and integrations, improving operational efficiency by <span className="text-green-600 dark:text-green-400 font-bold">~40%</span>
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8, duration: 0.5 }}
-                    className="flex items-start gap-3"
-                  >
-                    <span className="mt-2 w-2 h-2 rounded-full bg-teal-500 flex-shrink-0"></span>
-                    <span>
-                      Reduced regression and verification effort by <span className="text-green-600 dark:text-green-400 font-bold">~80%</span> by implementing reusable test scripts, validation checks, and structured reviews
-                    </span>
-                  </motion.li>
-                </ul>
+                <div className="space-y-6 text-base md:text-lg text-neutral-700 dark:text-neutral-300">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400 mb-3">
+                      Healthcare RCM &amp; automation
+                    </p>
+                    <ul className="space-y-3">
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"></span>
+                        <span>
+                          Architected scalable automation for eligibility, authorization, and claims; delivered across <span className="text-neutral-900 dark:text-white font-semibold">156+ Azure DevOps</span> repositories in the Automation project (payer/client workflows).
+                        </span>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.25, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></span>
+                        <span>
+                          Built high-performance pipelines integrated with <span className="text-neutral-900 dark:text-white font-semibold">Availity</span>, accelerating claim processing turnaround by up to <span className="text-green-600 dark:text-green-400 font-bold">~95%</span>.
+                        </span>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0"></span>
+                        <span>
+                          Distributed bot orchestration with queues, retries, centralized logging, and fault-tolerant execution; <span className="text-neutral-900 dark:text-white font-semibold">FastAPI</span> microservices improved reliability on key workflows by <span className="text-green-600 dark:text-green-400 font-bold">~40%</span>.
+                        </span>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.35, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-green-500 flex-shrink-0"></span>
+                        <span>
+                          Automated EHR flows (<span className="text-neutral-900 dark:text-white font-semibold">Practice Fusion</span>) and reusable validation frameworks, improving efficiency by <span className="text-green-600 dark:text-green-400 font-bold">~40%</span> and cutting regression effort by <span className="text-green-600 dark:text-green-400 font-bold">~80%</span>.
+                        </span>
+                      </motion.li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400 mb-3">
+                      BotVeta (orchestration platform)
+                    </p>
+                    <ul className="space-y-3">
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-yellow-500 flex-shrink-0"></span>
+                        <span>
+                          Bot-manager services (<span className="text-neutral-900 dark:text-white font-semibold">FastAPI + Next.js + TypeScript</span>) with JWT RBAC, <span className="text-neutral-900 dark:text-white font-semibold">APScheduler</span> timed runs, and full run/job lifecycle tracking across Python and Node bot servers.
+                        </span>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.45, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"></span>
+                        <span>
+                          Orchestration API on <span className="text-neutral-900 dark:text-white font-semibold">.NET 9</span>: SQL Server, EF Core, <span className="text-neutral-900 dark:text-white font-semibold">Hangfire</span>, Serilog, Swagger; operator UI (<span className="text-neutral-900 dark:text-white font-semibold">React 19 + Vite</span>) and admin console (<span className="text-neutral-900 dark:text-white font-semibold">Next.js 16</span>).
+                        </span>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-teal-500 flex-shrink-0"></span>
+                        <span>
+                          Enterprise integrations: Azure Key Vault, AWS credential flows, SFTP, Gmail, SQL/ODBC pipelines.
+                        </span>
+                      </motion.li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-purple-600 dark:text-purple-400 mb-3">
+                      AI document &amp; voice
+                    </p>
+                    <ul className="space-y-3">
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.55, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
+                        <span>
+                          AI PDF extraction in admin: large uploads, split/bundle workflows, <span className="text-neutral-900 dark:text-white font-semibold">FastAPI + AWS Bedrock (Claude 3.5)</span>, rule-based and confidence-aware validation, JSON/Excel outputs for RCM.
+                        </span>
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.6, duration: 0.5 }}
+                        className="flex items-start gap-3"
+                      >
+                        <span className="mt-2 w-2 h-2 rounded-full bg-cyan-500 flex-shrink-0"></span>
+                        <span>
+                          IVR platform on <span className="text-neutral-900 dark:text-white font-semibold">Amazon Connect</span> with Bedrock conversational flows; Python/AWS backends (EC2, DynamoDB, Lambda) and React dashboards; Excel-driven triggers — <span className="text-green-600 dark:text-green-400 font-bold">~60–80%</span> less manual calling.
+                        </span>
+                      </motion.li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

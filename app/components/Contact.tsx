@@ -12,7 +12,7 @@ export default function Contact() {
     },
     {
       name: "GitHub",
-      href: "https://github.com/KARUNAVASU",
+      href: "https://github.com/KarunaV23",
       icon: "💻",
       gradient: "from-gray-500 to-gray-700",
     },

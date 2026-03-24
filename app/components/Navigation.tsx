@@ -20,6 +20,7 @@ export default function Navigation() {
     { href: "#experience", label: "Work" },
     { href: "#projects", label: "Projects" },
     { href: "#tech-stack", label: "Tech Stack" },
+    { href: "#publications", label: "Publications" },
     { href: "/resume", label: "Resume" },
     { href: "#contact", label: "Contact" },
   ];

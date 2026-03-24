@@ -13,8 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Karuna Vasu | Full-Stack Python Developer",
-  description: "Full-Stack Python Developer specializing in automation platforms, AI-assisted workflows, and scalable backend systems for US healthcare (RCM).",
+  title: "Karuna Vasu | Backend / Platform Engineer",
+  description:
+    "Backend-focused Python developer building automation platforms, BotVeta orchestration, AWS Bedrock document AI, and Amazon Connect IVR systems for US Healthcare RCM.",
 };
 
 export default function RootLayout({

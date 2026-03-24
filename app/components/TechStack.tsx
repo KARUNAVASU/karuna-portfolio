@@ -10,17 +10,23 @@ interface Tech {
 const technologies: Tech[] = [
   { name: "Python", icon: "🐍" },
   { name: "FastAPI", icon: "🚀" },
+  { name: ".NET / C#", icon: "🔷" },
+  { name: "Hangfire", icon: "⏱️" },
   { name: "Django", icon: "🎯" },
   { name: "Flask", icon: "🌶️" },
   { name: "Next.js", icon: "▲" },
   { name: "React", icon: "⚛️" },
-  { name: "SQL", icon: "🗄️" },
+  { name: "Vite", icon: "⚡" },
+  { name: "SQL Server", icon: "🗃️" },
   { name: "PostgreSQL", icon: "🐘" },
+  { name: "SQL", icon: "🗄️" },
   { name: "Selenium", icon: "🤖" },
   { name: "AWS", icon: "☁️" },
+  { name: "Bedrock", icon: "🧠" },
+  { name: "Amazon Connect", icon: "📞" },
   { name: "Docker", icon: "🐳" },
   { name: "REST APIs", icon: "🔌" },
-  { name: "LLMs", icon: "🤖" },
+  { name: "LLMs", icon: "✨" },
   { name: "Git", icon: "📦" },
   { name: "CI/CD", icon: "⚙️" },
   { name: "TypeScript", icon: "📘" },
@@ -45,7 +51,7 @@ export default function TechStack() {
           </p>
         </div>
         
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 md:gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-4 md:gap-6">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}

@@ -9,7 +9,10 @@ const publications = [
     conference: "2023 International Conference on Network, Multimedia and Information Technology (NMITCON)",
     date: "September 2023",
     publisher: "IEEE",
-    link: "https://ieeexplore.ieee.org/document/10276059",
+    link: "https://doi.org/10.1109/NMITCON58196.2023.10276059",
+    linkLabel: "DOI",
+    secondaryLink: "https://ieeexplore.ieee.org/document/10276059",
+    secondaryLinkLabel: "IEEE Xplore",
     achievements: [
       "Best Presenter Award",
       "Best Paper Award"
@@ -64,19 +67,31 @@ export default function Publications() {
                     <p className="text-sm text-neutral-500 dark:text-neutral-500 mb-4">
                       {pub.publisher} • {pub.date}
                     </p>
-                    {pub.link && (
-                      <motion.a
-                        href={pub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
-                      >
-                        <span>🔗</span>
-                        <span>Read on IEEE Xplore</span>
-                        <span>→</span>
-                      </motion.a>
-                    )}
+                    <div className="flex flex-wrap gap-3">
+                      {pub.link && (
+                        <motion.a
+                          href={pub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.05 }}
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+                        >
+                          <span>🔗</span>
+                          <span>{pub.linkLabel ?? "Publication link"}</span>
+                        </motion.a>
+                      )}
+                      {pub.secondaryLink && (
+                        <motion.a
+                          href={pub.secondaryLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.05 }}
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-neutral-300 dark:border-neutral-600 text-neutral-800 dark:text-neutral-200 text-sm font-semibold hover:border-purple-500/50 transition-all"
+                        >
+                          <span>{pub.secondaryLinkLabel ?? "More"}</span>
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
                 </div>
 

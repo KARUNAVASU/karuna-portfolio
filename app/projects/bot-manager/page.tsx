@@ -32,10 +32,10 @@ export default function BotManagerCaseStudy() {
             <span>Hero Project</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-neutral-900 dark:text-white">
-            Bot Manager & Automation Orchestrator
+            BotVeta — Automation Orchestration Platform
           </h1>
           <p className="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 mb-8">
-            A centralized platform to manage, schedule, monitor, and scale Python automation bots across RCM workflows.
+            Multi-tenant scheduling, monitoring, and scaling for Python and Node automation across US Healthcare RCM — FastAPI, .NET 9, React, and Next.js.
           </p>
           <div className="flex flex-wrap gap-3">
             <a

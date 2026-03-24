@@ -4,6 +4,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Resume from "./components/Resume";
+import Publications from "./components/Publications";
 import Contact from "./components/Contact";
 import Navigation from "./components/Navigation";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <TechStack />
+      <Publications />
       <Resume />
       <Contact />
       <footer className="px-4 sm:px-6 md:px-12 lg:px-24 py-16 border-t border-neutral-200 dark:border-neutral-800/50 relative overflow-hidden">

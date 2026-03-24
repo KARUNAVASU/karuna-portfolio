@@ -32,7 +32,7 @@ export default function ResumePage() {
             ← Back to Portfolio
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold mb-1 print:text-2xl">Karuna Vasu</h1>
-          <p className="text-lg md:text-xl text-white/90 mb-4 print:text-base">Python Developer | Automation & Platform Engineering | Full-Stack</p>
+          <p className="text-lg md:text-xl text-white/90 mb-4 print:text-base">Backend / Platform Engineer | FastAPI | AWS | AI Systems | IVR (Amazon Connect)</p>
           
           <div className="flex flex-wrap gap-3 md:gap-4 text-xs md:text-sm print:text-xs">
             <div className="flex items-center gap-1">
@@ -71,7 +71,7 @@ export default function ResumePage() {
                 Professional Summary
               </h2>
               <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed print:text-xs">
-                Full-Stack Python Developer with 2+ years of experience building automation platforms and orchestration tools for US Healthcare (RCM). Proven track record in reducing processing time by up to 95% and improving system performance by up to 40% through efficient backend design, test automation, and database optimization. Expert in automation-first systems, LLM-powered workflows, healthcare RCM operations, and intelligent bot orchestration. Specialized in building production-grade bot management platforms and AI-assisted IVR systems.
+                Backend-focused Python developer with 2+ years building scalable automation platforms, AI-driven workflows, and microservices for US Healthcare (RCM). Proven impact: up to ~95% faster processing (e.g. Availity-integrated pipelines), ~40% efficiency gains on key workflows, and ~40–80% less manual effort including IVR. Specialized in FastAPI, distributed bot orchestration, AWS Bedrock document intelligence, and Amazon Connect voice automation — including BotVeta orchestration APIs, operator/admin frontends, and integrated Python services.
               </p>
             </section>
 
@@ -87,38 +87,45 @@ export default function ResumePage() {
                 <div className="border-l-2 border-purple-600 pl-3 print:pl-2">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
                     <div>
-                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white print:text-base">Python Developer</h3>
+                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white print:text-base">Backend / Platform Engineer (Python Developer)</h3>
                       <p className="text-base text-neutral-600 dark:text-neutral-400 print:text-sm">Integrity Healthcare Solutions Pvt Ltd</p>
                     </div>
                     <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-700 dark:text-green-400 text-xs font-medium border border-green-500/30 print:text-xs">
-                      Dec 2023 - Jan 2026
+                      Dec 2023 - Present
                     </span>
                   </div>
                   <p className="text-xs text-neutral-500 dark:text-neutral-500 mb-2 print:text-xs">Ahmedabad, Gujarat, India</p>
+                  <p className="text-xs font-semibold text-purple-700 dark:text-purple-300 mb-1 print:text-xs">Healthcare RCM &amp; automation</p>
+                  <ul className="space-y-1 text-sm text-neutral-700 dark:text-neutral-300 print:text-xs print:space-y-0.5 mb-3">
+                    <li className="flex items-start gap-1.5">
+                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
+                      <span>Automation for eligibility, authorization, and claims across <strong>156+ Azure DevOps</strong> repos in the Automation project; Availity-integrated pipelines up to <strong className="text-green-600 dark:text-green-400">~95%</strong> faster turnaround.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
+                      <span>Distributed bot orchestration (queues, retries, logging); <strong>FastAPI</strong> microservices; EHR (<strong>Practice Fusion</strong>) ~<strong className="text-green-600 dark:text-green-400">40%</strong> efficiency; validation frameworks cutting regression effort ~<strong className="text-green-600 dark:text-green-400">80%</strong>.</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs font-semibold text-purple-700 dark:text-purple-300 mb-1 print:text-xs">BotVeta</p>
+                  <ul className="space-y-1 text-sm text-neutral-700 dark:text-neutral-300 print:text-xs print:space-y-0.5 mb-3">
+                    <li className="flex items-start gap-1.5">
+                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
+                      <span><strong>FastAPI + Next.js</strong> bot-manager: JWT RBAC, <strong>APScheduler</strong>, lifecycle tracking; mixed Python/Node runners with trigger/stop APIs.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
+                      <span><strong>.NET 9</strong> orchestration API: SQL Server, EF Core, <strong>Hangfire</strong>, Serilog; operator UI (<strong>React + Vite</strong>), admin (<strong>Next.js 16</strong>); Key Vault, SFTP, ODBC integrations.</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs font-semibold text-purple-700 dark:text-purple-300 mb-1 print:text-xs">AI document &amp; voice</p>
                   <ul className="space-y-1 text-sm text-neutral-700 dark:text-neutral-300 print:text-xs print:space-y-0.5">
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Built and maintained automation-first workflows for US healthcare RCM operations (EV/Auth/Claims), improving turnaround time and reducing manual effort</span>
+                      <span>PDF extraction: <strong>FastAPI + AWS Bedrock</strong>, admin upload/split/bundle, validation for RCM outputs.</span>
                     </li>
                     <li className="flex items-start gap-1.5">
                       <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Engineered Python automation pipelines integrated with <strong>Availity</strong>, reducing claim processing turnaround by <strong className="text-green-600 dark:text-green-400">95%</strong> and enabling faster high-volume execution</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Developed backend microservices + orchestration logic to improve system reliability by <strong className="text-green-600 dark:text-green-400">~40%</strong>, focusing on stability, retries, and scalable execution patterns</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Contributed to building a <strong>Bot Manager / Orchestrator platform</strong> to schedule, monitor, and scale multiple automation bots with process-wise and user-wise visibility</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Automated EHR workflows (<strong>Practice Fusion</strong>) by designing automation-ready flows and integrations, improving operational efficiency by <strong className="text-green-600 dark:text-green-400">~40%</strong></span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Reduced regression and verification effort by <strong className="text-green-600 dark:text-green-400">~80%</strong> by implementing reusable test scripts, automation checks, and structured reviews</span>
+                      <span><strong>Amazon Connect + Bedrock</strong> IVR; Python/AWS (EC2, DynamoDB, Lambda); React dashboards; Excel triggers — <strong className="text-green-600 dark:text-green-400">~60–80%</strong> less manual calling.</span>
                     </li>
                   </ul>
                 </div>
@@ -168,28 +175,37 @@ export default function ResumePage() {
               <div className="space-y-3 print:space-y-2">
                 <div className="border-l-2 border-purple-600 pl-3 print:pl-2">
                   <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
-                    Bot Manager & Automation Orchestrator
+                    BotVeta — Automation Orchestration Platform
                   </h3>
                   <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    Centralized platform to manage, schedule, monitor, and scale Python automation bots. Built to scale as a commercial RCM automation product. <span className="text-purple-600 dark:text-purple-400">Python, FastAPI, Next.js, SQL, AWS</span>
+                    Multi-tenant scheduling and monitoring; APIs → scheduler → runners → logging. <span className="text-purple-600 dark:text-purple-400">Python, FastAPI, .NET, React, Next.js, SQL Server, PostgreSQL, AWS</span>
                   </p>
                 </div>
 
                 <div className="border-l-2 border-blue-500 pl-3 print:pl-2">
                   <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
-                    AI-Powered IVR Automation System
+                    AI PDF Extraction &amp; Document Intelligence
                   </h3>
                   <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    AI-assisted IVR system using LLMs for intelligent call routing and verification. Routes to live agents only when needed. <span className="text-blue-600 dark:text-blue-400">Python, LLMs, IVR, APIs, Cloud</span>
+                    Bedrock-powered extraction with split/group/validate for healthcare PDFs. <span className="text-blue-600 dark:text-blue-400">Python, FastAPI, AWS Bedrock</span>
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-cyan-500 pl-3 print:pl-2">
+                  <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
+                    AI Voice (Amazon Connect + Bedrock)
+                  </h3>
+                  <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
+                    Real-time IVR automation and routing for payer workflows. <span className="text-cyan-600 dark:text-cyan-400">Python, REST, Amazon Connect, AWS</span>
                   </p>
                 </div>
 
                 <div className="border-l-2 border-green-500 pl-3 print:pl-2">
                   <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
-                    Healthcare RCM Workflow Automation
+                    RCM Automation Suite (EV • Auth • Claims)
                   </h3>
                   <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    Comprehensive automation for Eligibility Verification, Prior Authorization, and Claims Processing. <span className="text-green-600 dark:text-green-400">Python, Selenium, SQL, Automation</span>
+                    Rule-based validation, retries, and orchestration at scale. <span className="text-green-600 dark:text-green-400">Python, Selenium, Pandas, SQL</span>
                   </p>
                 </div>
               </div>
@@ -206,12 +222,13 @@ export default function ResumePage() {
               </h2>
               <div className="flex flex-wrap gap-1.5 print:gap-1">
                 {[
-                  "Python", "Django", "Flask", "FastAPI", "REST APIs",
-                  "TensorFlow", "Scikit-learn", "Machine Learning", "AI/ML",
-                  "PostgreSQL", "SQL", "Pandas", "Data Analysis",
-                  "AWS", "Docker", "CI/CD", "Microservices",
-                  "Selenium", "Automation", "Git", "Agile",
-                  "React", "Next.js", "JavaScript", "TypeScript"
+                  "Python", "C#", "SQL", "TypeScript", "JavaScript",
+                  "FastAPI", "ASP.NET Core", "Flask", "Django", "REST APIs",
+                  "React", "Next.js", "Vite", "Tailwind CSS",
+                  "PostgreSQL", "SQL Server", "Pandas", "PyODBC",
+                  "AWS (Connect, Bedrock, Lambda, EC2, DynamoDB)", "Docker", "CI/CD",
+                  "Hangfire", "APScheduler", "Selenium", "Azure Key Vault",
+                  "LLMs", "OpenAI APIs", "Git", "Linux"
                 ].map((skill, index) => (
                   <span
                     key={index}
@@ -250,11 +267,11 @@ export default function ResumePage() {
                 Publications
               </h2>
               <div>
-                <h3 className="font-semibold text-neutral-900 dark:text-white text-xs mb-1 print:text-xs">
-                  ECG Heart Rate Variability Signal Analysis
+                <h3 className="font-semibold text-neutral-900 dark:text-white text-xs mb-1 print:text-xs leading-snug">
+                  Electrocardiogram HRV Signal Analysis and Data Acquisition (NMITCON 2023)
                 </h3>
                 <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-1 print:text-xs">
-                  IEEE NMITCON 2023
+                  <a href="https://doi.org/10.1109/NMITCON58196.2023.10276059" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 hover:underline">DOI: 10.1109/NMITCON58196.2023.10276059</a>
                 </p>
                 <div className="flex flex-wrap gap-1">
                   <span className="px-1.5 py-0.5 rounded bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-medium print:text-xs">

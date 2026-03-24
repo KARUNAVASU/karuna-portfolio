@@ -29,7 +29,7 @@ export default function About() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-base md:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed"
           >
-            Full-Stack Python Developer in US Healthcare (RCM). I build automation platforms and orchestration tools that reduce manual work and improve turnaround time across EV/Auth/Claims.
+            Backend-focused Python developer in US Healthcare (RCM). I ship scalable automation, BotVeta-style orchestration, and AI workflows (Bedrock document extraction, Amazon Connect IVR) that cut turnaround time and manual effort.
           </motion.p>
           
           <motion.div
@@ -67,7 +67,7 @@ export default function About() {
                 Current focus
               </h3>
               <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                Building <span className="font-semibold text-neutral-900 dark:text-white">Bot Manager</span> — a centralized platform to schedule, monitor, and scale Python bots across RCM operations.
+                Extending <span className="font-semibold text-neutral-900 dark:text-white">BotVeta</span> — multi-tenant scheduling, monitoring, and scaling of Python and Node automation with admin and operator experiences.
               </p>
             </div>
           </motion.div>

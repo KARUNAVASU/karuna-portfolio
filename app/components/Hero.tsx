@@ -74,7 +74,7 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-xl md:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-300 mb-2 font-semibold"
         >
-          Full-Stack Python Developer
+          Backend / Platform Engineer
         </motion.p>
         
         <motion.p
@@ -83,7 +83,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="text-base md:text-lg text-neutral-500 dark:text-neutral-400 mb-8 font-medium"
         >
-          Automation Platforms • AI Workflows • US Healthcare RCM
+          FastAPI • AWS • AI Systems • Amazon Connect IVR
         </motion.p>
         
         <motion.p
@@ -92,7 +92,7 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed mb-8"
         >
-          I build automation-first systems and orchestration platforms that ship real business outcomes.
+          Automation-first platforms, BotVeta orchestration, Bedrock document intelligence, and voice workflows for US Healthcare RCM.
         </motion.p>
 
         {/* Proof Strip */}
@@ -106,13 +106,13 @@ export default function Hero() {
             US Healthcare RCM
           </span>
           <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
-            EV / Auth / Claims Automation
+            Azure DevOps Automation (156+ repos)
           </span>
           <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
-            Bot Orchestration Platform
+            BotVeta Orchestration
           </span>
           <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 dark:border-purple-500/30 text-neutral-700 dark:text-neutral-300 text-sm font-medium">
-            AI-assisted IVR Workflows
+            Bedrock & Amazon Connect
           </span>
         </motion.div>
 
