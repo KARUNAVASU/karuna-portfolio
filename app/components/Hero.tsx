@@ -74,16 +74,16 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-xl md:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-300 mb-2 font-semibold"
         >
-          Backend / Platform Engineer
+          Software Engineer
         </motion.p>
         
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-base md:text-lg text-neutral-500 dark:text-neutral-400 mb-8 font-medium"
+          className="text-xs sm:text-sm md:text-base text-neutral-500 dark:text-neutral-400 mb-8 font-semibold tracking-wide uppercase max-w-4xl mx-auto leading-relaxed px-2"
         >
-          FastAPI • AWS • AI Systems • Amazon Connect IVR
+          Backend/Platform Engineer | Python | Automation Systems | AWS | AI Systems
         </motion.p>
         
         <motion.p

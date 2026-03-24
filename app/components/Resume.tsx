@@ -37,10 +37,10 @@ export default function Resume() {
                 <span className="text-4xl">📄</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-white">
-                Karuna Vasu - Resume
+                Karuna Vasu — Resume
               </h3>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto">
-                Backend / Platform Engineer | FastAPI | AWS | AI &amp; IVR
+              <p className="text-neutral-600 dark:text-neutral-400 mb-8 max-w-md mx-auto text-sm sm:text-base">
+                Software Engineer — view inline or download the latest PDF résumé.
               </p>
             </div>
 
@@ -56,8 +56,8 @@ export default function Resume() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </Link>
               <a
-                href="/Karuna_Vasu_Resume.pdf"
-                download="Karuna_Vasu_Resume.pdf"
+                href="/KarunaVasu_SoftwareEngineer_Resume.pdf"
+                download="KarunaVasu_SoftwareEngineer_Resume.pdf"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold border-2 border-neutral-300 dark:border-neutral-700 text-neutral-800 dark:text-neutral-200 hover:border-purple-500/60 dark:hover:border-purple-500/50 hover:bg-neutral-100 dark:hover:bg-neutral-900/50 transition-all"
               >
                 <span>📥</span>

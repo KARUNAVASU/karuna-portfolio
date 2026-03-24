@@ -19,13 +19,6 @@ export default function Contact() {
       subtitle: "Profile & certifications",
     },
     {
-      name: "Portfolio",
-      href: "https://karunaportfolio-tau.vercel.app/",
-      icon: "🌐",
-      gradient: "from-purple-500 to-indigo-600",
-      subtitle: "This site",
-    },
-    {
       name: "GitHub",
       href: "https://github.com/KARUNAVASU",
       icon: "💻",
@@ -53,12 +46,9 @@ export default function Contact() {
           <p className="text-sm md:text-base text-neutral-500 dark:text-neutral-500">
             📍 Mangalore, Karnataka 575003, India
           </p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-1">
-            +91 6350545182
-          </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {links.map((link, index) => (
             <motion.a
               key={link.name}
