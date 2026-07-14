@@ -35,7 +35,10 @@ export const PROFILE_IMAGE = "/profile.jpg";
 /** Absolute URL for Open Graph / Twitter cards */
 export const PROFILE_IMAGE_ABSOLUTE = `${SITE_URL}/profile.jpg`;
 
-export const IEEE_LINK = pub(process.env.NEXT_PUBLIC_IEEE_PUBLICATION_URL);
+export const IEEE_LINK = pub(
+  process.env.NEXT_PUBLIC_IEEE_PUBLICATION_URL,
+  "https://ieeexplore.ieee.org/document/10276059",
+);
 
 export const RESUME_FILE_NAME = pub(
   process.env.NEXT_PUBLIC_RESUME_FILE_NAME,
@@ -52,7 +55,12 @@ export const RESUME_DRIVE_DOWNLOAD_URL = pub(
   process.env.NEXT_PUBLIC_RESUME_DRIVE_DOWNLOAD_URL,
 );
 
-export const CONTACT_EMAIL = pub(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
+/** Public contact — baked in so production works without Vercel env. */
+export const CONTACT_EMAIL = pub(
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+  "karunavasu525@gmail.com",
+);
+/** Phone stays env-only (not baked into the client bundle by default). */
 export const CONTACT_PHONE = pub(process.env.NEXT_PUBLIC_CONTACT_PHONE);
 export const CONTACT_PHONE_DISPLAY = pub(
   process.env.NEXT_PUBLIC_CONTACT_PHONE_DISPLAY,
@@ -60,12 +68,19 @@ export const CONTACT_PHONE_DISPLAY = pub(
 );
 
 export const socialLinks = {
-  github: pub(process.env.NEXT_PUBLIC_GITHUB_URL),
-  linkedin: pub(process.env.NEXT_PUBLIC_LINKEDIN_URL),
+  github: pub(
+    process.env.NEXT_PUBLIC_GITHUB_URL,
+    "https://github.com/KARUNAVASU",
+  ),
+  linkedin: pub(
+    process.env.NEXT_PUBLIC_LINKEDIN_URL,
+    "https://linkedin.com/in/karuna-vasu-506414221",
+  ),
   email: CONTACT_EMAIL ? `mailto:${CONTACT_EMAIL}` : "",
   emailDisplay: CONTACT_EMAIL,
 };
 
+/** Demo / internal product URLs — env-only (empty default). */
 export const productUrls = {
   botvetaLive: pub(process.env.NEXT_PUBLIC_BOTVETA_LIVE_URL),
   botvetaBuild: pub(process.env.NEXT_PUBLIC_BOTVETA_BUILD_URL),
