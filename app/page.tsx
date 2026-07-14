@@ -1,36 +1,43 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import TechStack from "./components/TechStack";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
-import Navigation from "./components/Navigation";
+import type { Metadata } from "next";
+import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
+import Experience from "./components/sections/Experience";
+import Hero from "./components/sections/Hero";
+import Footer from "./components/layout/Footer";
+import Projects from "./components/sections/Projects";
+import Publications from "./components/sections/Publications";
+import Resume from "./components/sections/Resume";
+import TechStack from "./components/sections/TechStack";
+import SiteNav from "./components/ui/SiteNav";
+import StatusMarquee from "./components/ui/StatusMarquee";
+import { publications } from "./data/publications";
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  channelLinks,
+  locationMeta,
+  productUrls,
+} from "./data/site";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+};
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
-      <Navigation />
+    <main className="relative mx-auto max-w-container-max bg-deep-black">
+      <SiteNav />
       <Hero />
       <About />
       <Experience />
-      <Projects />
+      <Projects botvetaLiveUrl={productUrls.botvetaLive} />
       <TechStack />
+      <Publications publication={publications[0]} />
       <Resume />
-      <Contact />
-      <footer className="px-4 sm:px-6 md:px-12 lg:px-24 py-16 border-t border-neutral-200 dark:border-neutral-800/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-neutral-950"></div>
-        <div className="relative text-center">
-          <p className="text-neutral-600 dark:text-neutral-400 mb-2">
-            Made with <span className="text-red-500 animate-pulse">❤️</span> by{" "}
-            <span className="gradient-text font-semibold">Karuna Vasu</span>
-          </p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-500">
-            © {new Date().getFullYear()} All rights reserved
-          </p>
-        </div>
-      </footer>
+      <StatusMarquee />
+      <Contact channelLinks={channelLinks} locationMeta={locationMeta} />
+      <Footer />
     </main>
   );
 }
-

@@ -1,221 +1,247 @@
 "use client";
 
-import Link from "next/link";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import MaterialIcon from "@/app/components/ui/MaterialIcon";
+import PageShell from "@/app/components/ui/PageShell";
+import {
+  CONTACT_PHONE,
+  CONTACT_PHONE_DISPLAY,
+  RESUME_DRIVE_VIEW_URL,
+  RESUME_FILE_NAME,
+  RESUME_PDF_PATH,
+  socialLinks,
+} from "@/app/data/site";
+
+const skills = [
+  "Python",
+  "FastAPI",
+  "Django",
+  ".NET",
+  "Next.js",
+  "React",
+  "PostgreSQL",
+  "SQL Server",
+  "AWS",
+  "Docker",
+  "Selenium",
+  "Bedrock",
+  "Git",
+];
+
+const experience = [
+  {
+    title: "Backend / Platform Engineer (Python Developer)",
+    company: "Integrity Healthcare Solutions Pvt Ltd",
+    location: "Ahmedabad, Gujarat",
+    period: "DEC_2023 — PRESENT",
+    accent: "border-electric-blue",
+    bullets: [
+      "Automation-first workflows for US healthcare RCM (EV / Auth / Claims)",
+      "Availity integration — 95% faster claim processing turnaround",
+      "BotVeta orchestration API (.NET 9, Hangfire, FastAPI, JWT RBAC)",
+      "AWS Bedrock PDF extraction and Amazon Connect IVR automation",
+      "~60–80% reduction in manual calling effort across payer workflows",
+    ],
+  },
+  {
+    title: "Research Intern",
+    company: "Manipal Institute of Technology",
+    location: "Udupi, Karnataka",
+    period: "FEB_2023 — DEC_2023",
+    accent: "border-primary",
+    bullets: [
+      "IEEE paper on ECG Heart Rate Variability — Best Paper & Best Presenter awards",
+    ],
+  },
+  {
+    title: "Data Science Intern",
+    company: "Zephyr Technologies and Solutions",
+    location: "Mangaluru, Karnataka",
+    period: "JUN_2023 — JUL_2023",
+    accent: "border-neon-purple",
+    bullets: [
+      "Real-time chat application with Python, Django, WebSockets, and PostgreSQL",
+    ],
+  },
+];
 
 export default function ResumePage() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const handlePrint = () => {
-    window.print();
-  };
-
-  const handleDownload = () => {
-    window.print();
-  };
+  const handlePrint = () => window.print();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors print:bg-white">
-      {/* Header */}
-      <header className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-8 px-4 sm:px-6 md:px-12 lg:px-24 print:py-4 print:bg-purple-600">
-        <div className="max-w-6xl mx-auto">
-          <Link 
-            href="/#resume"
-            className="inline-flex items-center gap-2 text-white/90 hover:text-white mb-4 text-sm font-medium print:hidden"
-          >
-            ← Back to Portfolio
-          </Link>
-          <h1 className="text-3xl md:text-4xl font-bold mb-1 print:text-2xl">Karuna Vasu</h1>
-          <p className="text-lg md:text-xl text-white/90 mb-4 print:text-base">Python Developer | Automation & Platform Engineering | Full-Stack</p>
-          
-          <div className="flex flex-wrap gap-3 md:gap-4 text-xs md:text-sm print:text-xs">
-            <div className="flex items-center gap-1">
-              <span>📍</span>
-              <span>Mangalore, Karnataka 575003, India</span>
+    <PageShell backHref="/#resume" backLabel="BACK_TO_PORTFOLIO">
+      <div className="mx-auto max-w-container-max px-margin-mobile pb-16 pt-8 md:px-margin-desktop md:pb-24">
+        {/* Header + actions */}
+        <header className="glass-card mb-gutter border-t-2 border-primary p-8 md:p-10 print:border print:border-neutral-300 print:bg-white print:text-black">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+            <div>
+              <p className="mb-3 font-mono text-label-caps text-primary">
+                RESUME_INTERFACE // INLINE
+              </p>
+              <h1 className="mb-2 font-display text-headline-lg text-on-surface print:text-black">
+                Karuna Vasu
+              </h1>
+              <p className="mb-4 font-body text-body-lg text-on-surface-variant print:text-neutral-700">
+                Backend / Platform Engineer · Python · Automation · AWS · AI
+                Systems
+              </p>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-code-sm text-on-surface-variant print:text-neutral-700">
+                <span>Mangalore, Karnataka 575003, IN</span>
+                {CONTACT_PHONE && (
+                  <a
+                    href={`tel:${CONTACT_PHONE}`}
+                    className="hover:text-primary print:text-black"
+                  >
+                    {CONTACT_PHONE_DISPLAY}
+                  </a>
+                )}
+                {socialLinks.email && (
+                  <a href={socialLinks.email} className="hover:text-primary print:text-black">
+                    {socialLinks.emailDisplay}
+                  </a>
+                )}
+                {socialLinks.linkedin && (
+                  <a
+                    href={socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary print:text-black"
+                  >
+                    LinkedIn
+                  </a>
+                )}
+                {socialLinks.github && (
+                  <a
+                    href={socialLinks.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary print:text-black"
+                  >
+                    GitHub
+                  </a>
+                )}
+              </div>
             </div>
-            <div className="flex items-center gap-1">
-              <span>📱</span>
-              <a href="tel:+916350545182" className="hover:underline print:text-white">+91 63505 45182</a>
-            </div>
-            <div className="flex items-center gap-1">
-              <span>📧</span>
-              <a href="mailto:karunavasu525@gmail.com" className="hover:underline print:text-white">karunavasu525@gmail.com</a>
-            </div>
-            <div className="flex items-center gap-1">
-              <span>💼</span>
-              <a href="https://linkedin.com/in/karuna-vasu-506414221" target="_blank" rel="noopener noreferrer" className="hover:underline print:text-white">linkedin.com/in/karuna-vasu-506414221</a>
-            </div>
-            <div className="flex items-center gap-1">
-              <span>💻</span>
-              <a href="https://github.com/KARUNAVASU" target="_blank" rel="noopener noreferrer" className="hover:underline print:text-white">github.com/KARUNAVASU</a>
+
+            <div className="flex flex-wrap gap-3 print:hidden">
+              <a
+                href={RESUME_PDF_PATH}
+                download={RESUME_FILE_NAME}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-neon-purple to-electric-blue px-6 py-3 font-mono text-label-caps tracking-widest transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.35)]"
+              >
+                <MaterialIcon name="download" />
+                GET_PDF
+              </a>
+              <button
+                type="button"
+                onClick={handlePrint}
+                className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 font-mono text-label-caps tracking-widest transition-all hover:bg-white/5"
+              >
+                <MaterialIcon name="print" />
+                PRINT
+              </button>
+              {RESUME_DRIVE_VIEW_URL && (
+                <a
+                  href={RESUME_DRIVE_VIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-primary/30 px-6 py-3 font-mono text-label-caps tracking-widest text-primary transition-all hover:bg-primary/10"
+                >
+                  <MaterialIcon name="open_in_new" />
+                  DRIVE
+                </a>
+              )}
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24 py-8 print:py-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 print:gap-4">
-          {/* Left Column */}
-          <div className="lg:col-span-2 space-y-5 print:space-y-4">
-            {/* Professional Summary */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-2 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Professional Summary
+        <div className="grid grid-cols-1 gap-gutter lg:grid-cols-12">
+          {/* Main column */}
+          <div className="space-y-gutter lg:col-span-8">
+            <section className="glass-card p-6 md:p-8 print:border print:border-neutral-200 print:bg-white">
+              <h2 className="mb-4 font-mono text-label-caps text-electric-blue">
+                PROFESSIONAL_SUMMARY
               </h2>
-              <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed print:text-xs">
-                Full-Stack Python Developer with 2+ years of experience building automation platforms and orchestration tools for US Healthcare (RCM). Proven track record in reducing processing time by up to 95% and improving system performance by up to 40% through efficient backend design, test automation, and database optimization. Expert in automation-first systems, LLM-powered workflows, healthcare RCM operations, and intelligent bot orchestration. Specialized in building production-grade bot management platforms and AI-assisted IVR systems.
+              <p className="font-body text-body-md leading-relaxed text-on-surface-variant print:text-neutral-800">
+                Backend-focused Python developer with 2+ years building automation
+                platforms and orchestration systems for US Healthcare RCM. Shipped
+                BotVeta-style multi-tenant scheduling, AWS Bedrock document
+                intelligence, and production IVR workflows — cutting turnaround
+                time and manual effort across eligibility, authorization, and
+                claims operations.
               </p>
             </section>
 
-            {/* Work Experience */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Work Experience
+            <section className="space-y-stack-md">
+              <h2 className="font-mono text-label-caps text-primary">
+                WORK_EXPERIENCE
               </h2>
-              
-              <div className="space-y-4 print:space-y-3">
-                {/* Current Role */}
-                <div className="border-l-2 border-purple-600 pl-3 print:pl-2">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
+              {experience.map((role) => (
+                <article
+                  key={role.title + role.company}
+                  className={`glass-card border-l-2 p-6 md:p-8 print:border print:border-neutral-200 print:bg-white ${role.accent}`}
+                >
+                  <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white print:text-base">Python Developer</h3>
-                      <p className="text-base text-neutral-600 dark:text-neutral-400 print:text-sm">Integrity Healthcare Solutions Pvt Ltd</p>
+                      <h3 className="font-display text-headline-md text-on-surface print:text-black">
+                        {role.title}
+                      </h3>
+                      <p className="text-on-surface-variant print:text-neutral-700">
+                        {role.company} · {role.location}
+                      </p>
                     </div>
-                    <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-700 dark:text-green-400 text-xs font-medium border border-green-500/30 print:text-xs">
-                      Dec 2023 - Jan 2026
+                    <span className="font-mono text-code-sm text-on-surface-variant print:text-neutral-600">
+                      {role.period}
                     </span>
                   </div>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500 mb-2 print:text-xs">Ahmedabad, Gujarat, India</p>
-                  <ul className="space-y-1 text-sm text-neutral-700 dark:text-neutral-300 print:text-xs print:space-y-0.5">
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Built and maintained automation-first workflows for US healthcare RCM operations (EV/Auth/Claims), improving turnaround time and reducing manual effort</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Engineered Python automation pipelines integrated with <strong>Availity</strong>, reducing claim processing turnaround by <strong className="text-green-600 dark:text-green-400">95%</strong> and enabling faster high-volume execution</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Developed backend microservices + orchestration logic to improve system reliability by <strong className="text-green-600 dark:text-green-400">~40%</strong>, focusing on stability, retries, and scalable execution patterns</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Contributed to building a <strong>Bot Manager / Orchestrator platform</strong> to schedule, monitor, and scale multiple automation bots with process-wise and user-wise visibility</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Automated EHR workflows (<strong>Practice Fusion</strong>) by designing automation-ready flows and integrations, improving operational efficiency by <strong className="text-green-600 dark:text-green-400">~40%</strong></span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <span className="mt-1 w-1 h-1 rounded-full bg-purple-600 flex-shrink-0"></span>
-                      <span>Reduced regression and verification effort by <strong className="text-green-600 dark:text-green-400">~80%</strong> by implementing reusable test scripts, automation checks, and structured reviews</span>
-                    </li>
+                  <ul className="space-y-2 font-body text-body-md text-on-surface-variant print:text-neutral-800">
+                    {role.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-2">
+                        <span className="text-primary opacity-60">&gt;</span>
+                        {bullet}
+                      </li>
+                    ))}
                   </ul>
-                </div>
-
-                {/* Research Intern */}
-                <div className="border-l-2 border-blue-500 pl-3 print:pl-2">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
-                    <div>
-                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white print:text-base">Research Intern</h3>
-                      <p className="text-base text-neutral-600 dark:text-neutral-400 print:text-sm">Manipal Institute of Technology</p>
-                    </div>
-                    <span className="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-700 dark:text-blue-400 text-xs font-medium border border-blue-500/30 print:text-xs">
-                      Feb 2023 - Dec 2023
-                    </span>
-                  </div>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500 mb-2 print:text-xs">Udupi, Karnataka, India</p>
-                  <p className="text-sm text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    Published IEEE paper as first author on ECG Heart Rate Variability, earning <strong className="text-yellow-600 dark:text-yellow-400">Best Paper</strong> and <strong className="text-yellow-600 dark:text-yellow-400">Best Presenter</strong> awards.
-                  </p>
-                </div>
-
-                {/* Data Science Intern */}
-                <div className="border-l-2 border-green-500 pl-3 print:pl-2">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
-                    <div>
-                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white print:text-base">Data Science Intern</h3>
-                      <p className="text-base text-neutral-600 dark:text-neutral-400 print:text-sm">Zephyr Technologies and Solutions PVT LTD</p>
-                    </div>
-                    <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-700 dark:text-green-400 text-xs font-medium border border-green-500/30 print:text-xs">
-                      Jun 2023 - Jul 2023
-                    </span>
-                  </div>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500 mb-2 print:text-xs">Mangaluru, Karnataka, India</p>
-                  <p className="text-sm text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    Developed real-time chat application using Python, Django, and PostgreSQL with WebSocket connections.
-                  </p>
-                </div>
-              </div>
+                </article>
+              ))}
             </section>
 
-            {/* Key Projects */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Key Projects
+            <section className="glass-card p-6 md:p-8 print:border print:border-neutral-200 print:bg-white">
+              <h2 className="mb-4 font-mono text-label-caps text-neon-purple">
+                KEY_PROJECTS
               </h2>
-              <div className="space-y-3 print:space-y-2">
-                <div className="border-l-2 border-purple-600 pl-3 print:pl-2">
-                  <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
-                    Bot Manager & Automation Orchestrator
-                  </h3>
-                  <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    Centralized platform to manage, schedule, monitor, and scale Python automation bots. Built to scale as a commercial RCM automation product. <span className="text-purple-600 dark:text-purple-400">Python, FastAPI, Next.js, SQL, AWS</span>
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-blue-500 pl-3 print:pl-2">
-                  <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
-                    AI-Powered IVR Automation System
-                  </h3>
-                  <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    AI-assisted IVR system using LLMs for intelligent call routing and verification. Routes to live agents only when needed. <span className="text-blue-600 dark:text-blue-400">Python, LLMs, IVR, APIs, Cloud</span>
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-green-500 pl-3 print:pl-2">
-                  <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-1 print:text-sm">
-                    Healthcare RCM Workflow Automation
-                  </h3>
-                  <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-xs">
-                    Comprehensive automation for Eligibility Verification, Prior Authorization, and Claims Processing. <span className="text-green-600 dark:text-green-400">Python, Selenium, SQL, Automation</span>
-                  </p>
-                </div>
-              </div>
+              <ul className="space-y-3 font-body text-body-md text-on-surface-variant print:text-neutral-800">
+                <li>
+                  <strong className="text-on-surface print:text-black">BotVeta</strong>{" "}
+                  — multi-tenant automation orchestration (Python, .NET 9, FastAPI,
+                  Next.js, Hangfire, AWS)
+                </li>
+                <li>
+                  <strong className="text-on-surface print:text-black">AI PDF Extraction</strong>{" "}
+                  — healthcare RCM document pipeline with AWS Bedrock (Claude 3.5)
+                </li>
+                <li>
+                  <strong className="text-on-surface print:text-black">AI Voice Automation</strong>{" "}
+                  — Amazon Connect + Bedrock IVR for payer calls
+                </li>
+                <li>
+                  <strong className="text-on-surface print:text-black">RCM Automation Suite</strong>{" "}
+                  — eligibility, prior auth, and claims at production scale
+                </li>
+              </ul>
             </section>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-5 print:space-y-4">
-            {/* Technical Skills */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Technical Skills
+          {/* Sidebar */}
+          <aside className="space-y-gutter lg:col-span-4">
+            <section className="glass-card p-6 md:p-8 print:border print:border-neutral-200 print:bg-white">
+              <h2 className="mb-4 font-mono text-label-caps text-electric-blue">
+                TECHNICAL_SKILLS
               </h2>
-              <div className="flex flex-wrap gap-1.5 print:gap-1">
-                {[
-                  "Python", "Django", "Flask", "FastAPI", "REST APIs",
-                  "TensorFlow", "Scikit-learn", "Machine Learning", "AI/ML",
-                  "PostgreSQL", "SQL", "Pandas", "Data Analysis",
-                  "AWS", "Docker", "CI/CD", "Microservices",
-                  "Selenium", "Automation", "Git", "Agile",
-                  "React", "Next.js", "JavaScript", "TypeScript"
-                ].map((skill, index) => (
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
                   <span
-                    key={index}
-                    className="px-2 py-1 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium border border-purple-200 dark:border-purple-800 print:text-xs print:px-1.5 print:py-0.5"
+                    key={skill}
+                    className="border border-white/10 bg-white/5 px-3 py-1 font-mono text-[11px] tracking-wide text-on-surface print:border-neutral-300 print:bg-neutral-100 print:text-neutral-800"
                   >
                     {skill}
                   </span>
@@ -223,107 +249,68 @@ export default function ResumePage() {
               </div>
             </section>
 
-            {/* Education */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Education
+            <section className="glass-card p-6 md:p-8 print:border print:border-neutral-200 print:bg-white">
+              <h2 className="mb-4 font-mono text-label-caps text-primary">
+                EDUCATION
               </h2>
-              <div className="space-y-3 print:space-y-2">
+              <div className="space-y-4 font-body text-body-md text-on-surface-variant print:text-neutral-800">
                 <div>
-                  <h3 className="font-bold text-neutral-900 dark:text-white text-sm print:text-xs">Master of Science: Bioinformatics</h3>
-                  <p className="text-xs text-neutral-600 dark:text-neutral-400 print:text-xs">Manipal Academy of Higher Education</p>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500 print:text-xs">2021 - 2023 • GPA: 7.24</p>
+                  <h3 className="font-display text-headline-md text-on-surface print:text-black">
+                    M.Sc. Bioinformatics
+                  </h3>
+                  <p>Manipal Academy of Higher Education · 2021–2023</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-neutral-900 dark:text-white text-sm print:text-xs">Bachelor of Science: Bioinformatics</h3>
-                  <p className="text-xs text-neutral-600 dark:text-neutral-400 print:text-xs">Sardar Patel University</p>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500 print:text-xs">2018 - 2021 • GPA: 7.00</p>
+                  <h3 className="font-display text-headline-md text-on-surface print:text-black">
+                    B.Sc. Bioinformatics
+                  </h3>
+                  <p>Sardar Patel University · 2018–2021</p>
                 </div>
               </div>
             </section>
 
-            {/* Publications */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Publications
+            <section className="glass-card p-6 md:p-8 print:border print:border-neutral-200 print:bg-white">
+              <h2 className="mb-4 font-mono text-label-caps text-neon-purple">
+                PUBLICATIONS
               </h2>
-              <div>
-                <h3 className="font-semibold text-neutral-900 dark:text-white text-xs mb-1 print:text-xs">
-                  ECG Heart Rate Variability Signal Analysis
-                </h3>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-1 print:text-xs">
-                  IEEE NMITCON 2023
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  <span className="px-1.5 py-0.5 rounded bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-medium print:text-xs">
-                    Best Paper
-                  </span>
-                  <span className="px-1.5 py-0.5 rounded bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-medium print:text-xs">
-                    Best Presenter
-                  </span>
-                </div>
-              </div>
+              <p className="font-body text-body-md text-on-surface-variant print:text-neutral-800">
+                ECG Heart Rate Variability — IEEE NMITCON 2023 (Best Paper, Best
+                Presenter)
+              </p>
             </section>
 
-            {/* Languages */}
-            <section>
-              <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-3 flex items-center gap-2 print:text-lg">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
-                Languages
+            <section className="glass-card p-6 md:p-8 print:border print:border-neutral-200 print:bg-white">
+              <h2 className="mb-4 font-mono text-label-caps text-on-surface-variant">
+                LANGUAGES
               </h2>
-              <div className="space-y-1 text-sm print:text-xs">
-                <div className="flex justify-between">
-                  <span className="text-neutral-700 dark:text-neutral-300">English</span>
-                  <span className="text-xs text-neutral-500 dark:text-neutral-500">Full Professional</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-neutral-700 dark:text-neutral-300">Gujarati</span>
-                  <span className="text-xs text-neutral-500 dark:text-neutral-500">Native</span>
-                </div>
-              </div>
+              <p className="font-body text-body-md text-on-surface-variant print:text-neutral-800">
+                English · Gujarati (Native)
+              </p>
             </section>
+          </aside>
+        </div>
+
+        {/* Mobile sticky download bar */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-white/10 bg-surface-charcoal/95 p-4 backdrop-blur-md print:hidden md:hidden">
+          <div className="mx-auto flex max-w-container-max gap-3">
+            <a
+              href={RESUME_PDF_PATH}
+              download={RESUME_FILE_NAME}
+              className="flex flex-1 items-center justify-center gap-2 bg-primary-container py-3 font-mono text-label-caps text-on-primary-container"
+            >
+              <MaterialIcon name="download" />
+              GET_PDF
+            </a>
+            <button
+              type="button"
+              onClick={handlePrint}
+              className="flex items-center justify-center border border-white/20 px-6 py-3 font-mono text-label-caps"
+            >
+              PRINT
+            </button>
           </div>
         </div>
-      </main>
-
-      {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-3 print:hidden z-50">
-        {/* Theme Toggle */}
-        {mounted && (
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="w-12 h-12 rounded-full bg-white dark:bg-neutral-800 border-2 border-neutral-200 dark:border-neutral-700 shadow-lg hover:shadow-xl transition-all flex items-center justify-center group hover:scale-110"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? (
-              <span className="text-xl">🌙</span>
-            ) : (
-              <span className="text-xl">☀️</span>
-            )}
-          </button>
-        )}
-
-        {/* Print Button */}
-        <button
-          onClick={handlePrint}
-          className="w-12 h-12 rounded-full bg-white dark:bg-neutral-800 border-2 border-neutral-200 dark:border-neutral-700 shadow-lg hover:shadow-xl transition-all flex items-center justify-center group hover:scale-110"
-          aria-label="Print resume"
-        >
-          <span className="text-xl">🖨️</span>
-        </button>
-
-        {/* Download Button */}
-        <button
-          onClick={handleDownload}
-          className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg hover:shadow-xl transition-all flex items-center justify-center group hover:scale-110"
-          aria-label="Download resume"
-        >
-          <span className="text-xl">📥</span>
-        </button>
       </div>
-    </div>
+    </PageShell>
   );
 }
-
