@@ -29,9 +29,12 @@ export interface Project {
 }
 
 function optionalButtons(
-  buttons: Array<ProjectButton | null | false | undefined>,
+  buttons: Array<ProjectButton | null | false | undefined | "">,
 ): ProjectButton[] | undefined {
-  const filtered = buttons.filter(Boolean) as ProjectButton[];
+  const filtered = buttons.filter(
+    (button): button is ProjectButton =>
+      typeof button === "object" && button !== null,
+  );
   return filtered.length ? filtered : undefined;
 }
 
