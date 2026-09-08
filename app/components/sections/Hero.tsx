@@ -41,7 +41,7 @@ export default function Hero() {
               Vasu
             </span>
             <span className="mt-3 block font-display text-headline-md text-on-surface-variant md:text-[28px]">
-              Backend / Platform Engineer
+              Software Engineer
             </span>
           </h1>
 
@@ -84,7 +84,7 @@ export default function Hero() {
             <div ref={imgRef} className="relative h-full w-full overflow-hidden">
               <Image
                 src={PROFILE_IMAGE}
-                alt="Karuna Vasu — Backend / Platform Engineer portrait"
+                alt="Karuna Vasu — Software Engineer portrait"
                 fill
                 className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
                 priority

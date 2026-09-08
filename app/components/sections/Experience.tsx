@@ -20,9 +20,9 @@ const experienceColumns = [
     border: "border-neon-purple/20",
     bulletColor: "text-neon-purple",
     items: [
-      "Managed full job lifecycle across Python/Node.",
-      "Orchestration API on .NET 9 with Hangfire.",
-      "Implemented JWT RBAC & Azure Key Vault.",
+      "App Hub: instances, scheduled workflows, Audit Center, auth rate limits, product-usage analytics.",
+      "Automation Dashboard tracking 371 projects + PM/SR CSM + ADO discussions; ~118K jobs/week · ~$20M visibility.",
+      "Product Weekly Update board pack (UTC date ranges + comparison); JWT RBAC, Hangfire, Azure Key Vault.",
     ],
   },
   {
@@ -31,9 +31,9 @@ const experienceColumns = [
     border: "border-primary/20",
     bulletColor: "text-primary",
     items: [
-      "AI PDF extraction using AWS Bedrock.",
-      "Amazon Connect IVR with Claude 3.5.",
-      "~60–80% reduction in manual calling effort.",
+      "AI PDF → Excel (Appointment List, HCO tracker, superbills) + saved_minutes → FTE KPIs.",
+      "Slack Tracker: auto-resolve image-only, reactions, digest emails, AI triage, SLA.",
+      "Amazon Connect IVR with Bedrock — ~60–80% less manual calling.",
     ],
   },
 ];
@@ -56,14 +56,14 @@ export default function Experience() {
           <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <div>
               <h3 className="font-display text-headline-md text-primary">
-                Backend / Platform Engineer (Python Developer)
+                Software Engineer
               </h3>
               <p className="text-holographic-silver opacity-60">
                 Integrity Healthcare Solutions Pvt Ltd | Ahmedabad, Gujarat
               </p>
             </div>
             <div className="border border-white/10 bg-white/5 px-4 py-2 font-mono text-code-sm">
-              DEC_2023 - PRESENT
+              DEC_18_2023 - PRESENT
             </div>
           </div>
 

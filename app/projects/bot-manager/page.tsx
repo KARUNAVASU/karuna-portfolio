@@ -10,52 +10,44 @@ export default function BotManagerCaseStudy() {
       content: (
         <>
           <p>
-            US Healthcare RCM operations require multiple Python automation bots running
-            across different processes (Eligibility Verification, Prior Authorization,
-            Claims Processing). Each bot was managed separately, making it difficult to:
+            US Healthcare RCM operations run many Python automation bots across
+            Eligibility Verification, Prior Authorization, and Claims. Each bot
+            was managed separately, making it difficult to schedule, monitor,
+            assign ownership, and scale as a multi-tenant product.
           </p>
-          <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Schedule and coordinate bot executions across teams</li>
-            <li>Monitor bot performance and track process-wise metrics</li>
-            <li>Scale automation workflows as business needs grow</li>
-            <li>Provide visibility into user-wise and data-wise execution insights</li>
-            <li>Maintain and update bots without disrupting operations</li>
+          <ul className="ml-2 list-inside list-disc space-y-2">
+            <li>No single place for instance lifecycle, schedules, or run logs</li>
+            <li>Hard to coordinate batches and multi-step workflows</li>
+            <li>Weak org-scoped RBAC and operational auditability</li>
           </ul>
-          <p>
-            This fragmented approach limited scalability and made it challenging to offer
-            automation as a commercial product for other RCM companies.
-          </p>
         </>
       ),
     },
     {
-      title: "Solution",
+      title: "Solution — App Hub / BotVeta",
       content: (
         <>
           <p>
-            Built <strong className="text-slate-950 dark:text-white">Bot Manager</strong> — a centralized
-            orchestration platform that provides:
+            Built <strong className="text-slate-950 dark:text-white">BotVeta</strong>{" "}
+            as the App Hub automation platform: a .NET control plane, React
+            operator portal, and Next.js admin console.
           </p>
-          <ul className="list-disc list-inside space-y-2 ml-2">
+          <ul className="ml-2 list-inside list-disc space-y-2">
             <li>
-              <strong className="text-slate-950 dark:text-white">Centralized Control:</strong> Single dashboard
-              to manage all Python bots
+              <strong className="text-slate-950 dark:text-white">Operator portal:</strong>{" "}
+              dashboards, bot instances, library + access requests, batches,
+              timezone-aware workflow schedules, integrations (Twilio), Audit
+              Center (process templates, copy-process, response review)
             </li>
             <li>
-              <strong className="text-slate-950 dark:text-white">Scheduling & Triggers:</strong> Automated
-              scheduling with configurable triggers
+              <strong className="text-slate-950 dark:text-white">Backend:</strong>{" "}
+              JWT auth (OTP, Google, org switch), Hangfire cron jobs, run-now +
+              conflict checks, workflow step executor, app-request / usage APIs
             </li>
             <li>
-              <strong className="text-slate-950 dark:text-white">Real-time Monitoring:</strong> Process-wise,
-              user-wise, and data-wise execution insights
-            </li>
-            <li>
-              <strong className="text-slate-950 dark:text-white">Scalable Architecture:</strong> Built to
-              handle multiple bots and high-volume operations
-            </li>
-            <li>
-              <strong className="text-slate-950 dark:text-white">Commercial Ready:</strong> Designed as a
-              product for other RCM companies
+              <strong className="text-slate-950 dark:text-white">Admin console:</strong>{" "}
+              organizations, users, grants, bot catalog, HTTP logs, PDF &amp;
+              Slack ops, Product Weekly Update board pack
             </li>
           </ul>
         </>
@@ -64,63 +56,67 @@ export default function BotManagerCaseStudy() {
     {
       title: "Architecture",
       content: (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {[
-            { title: "Frontend", desc: "Next.js dashboard for UI and real-time monitoring" },
-            { title: "Backend API", desc: "FastAPI microservices for orchestration and scheduling" },
-            { title: "Bot Execution Engine", desc: "Python bots with standardized interfaces" },
-            { title: "Database & Storage", desc: "SQL for execution logs, metrics, and config" },
+            {
+              title: "Operator UI",
+              desc: "wor-frontend — React 19 + Vite, org-scoped apps & RBAC nav",
+            },
+            {
+              title: "Control plane",
+              desc: "wor-backend — .NET 9 Web API + Worker, Hangfire + SQL Server",
+            },
+            {
+              title: "Admin UI",
+              desc: "apphub_admin — Next.js tenant/user/app/bot governance",
+            },
+            {
+              title: "Downstream products",
+              desc: "BFF proxies to FastAPI AI PDF + Slack tracker with forwarded JWT",
+            },
+            {
+              title: "Secrets & ops",
+              desc: "Azure Key Vault, Serilog, async HTTP request logging",
+            },
           ].map((item) => (
             <div
               key={item.title}
-              className="p-4 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-slate-950/30 dark:border-sky-300/10"
+              className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-sky-300/10 dark:bg-slate-950/30"
             >
-              <h3 className="font-bold text-slate-950 mb-1 dark:text-white">{item.title}</h3>
-              <p className="text-sm text-slate-600 dark:text-neutral-400">{item.desc}</p>
+              <h3 className="mb-1 font-bold text-slate-950 dark:text-white">
+                {item.title}
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-neutral-400">
+                {item.desc}
+              </p>
             </div>
           ))}
-          <div className="md:col-span-2 p-4 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-slate-950/30 dark:border-sky-300/10">
-            <h3 className="font-bold text-slate-950 mb-1 dark:text-white">Cloud Infrastructure</h3>
-            <p className="text-sm text-slate-600 dark:text-neutral-400">
-              AWS deployment with Docker containers for scalable execution
-            </p>
-          </div>
         </div>
       ),
     },
     {
       title: "What I Built",
       content: (
-        <ul className="list-disc list-inside space-y-2 ml-2">
-          <li>Designed platform architecture using Figma before development</li>
-          <li>Built FastAPI backend with microservices for bot orchestration</li>
-          <li>Developed Next.js frontend for scheduling, monitoring, and reporting</li>
-          <li>Created standardized interfaces for Python bot integration</li>
-          <li>Implemented process-wise, user-wise, and data-wise execution tracking</li>
-          <li>Built scheduling system with configurable triggers</li>
-          <li>Set up AWS infrastructure with Docker for scalable deployment</li>
+        <ul className="ml-2 list-inside list-disc space-y-2">
+          <li>Multi-tenant bot instance CRUD, assignees, schedules, run history</li>
+          <li>Batch + workflow orchestration with trigger conflict checking</li>
+          <li>Audit Center queue, work-item updates, time logs, CSV export</li>
+          <li>Permission-aware navigation and route guards across App Hub products</li>
+          <li>Admin surfaces for bot library, org onboarding, and grant editing</li>
         </ul>
       ),
     },
     {
-      title: "Current Stage & Roadmap",
+      title: "Impact",
       content: (
-        <>
-          <p>
-            <strong className="text-slate-950 dark:text-white">Current Status:</strong> Platform is in active
-            development; core orchestration features are implemented and tested in
-            production.
-          </p>
-          <p>
-            <strong className="text-slate-950 dark:text-white">Next Steps:</strong>
-          </p>
-          <ul className="list-disc list-inside space-y-2 ml-2">
-            <li>Complete advanced monitoring and analytics features</li>
-            <li>Enhance scalability for multi-tenant deployments</li>
-            <li>Add advanced scheduling and workflow automation</li>
-            <li>Prepare for commercial launch as an RCM automation product</li>
-          </ul>
-        </>
+        <p>
+          Centralized coordination for production RCM automation — roughly{" "}
+          <strong className="text-slate-950 dark:text-white">
+            40–60% less manual coordination
+          </strong>{" "}
+          — while keeping org RBAC, durable scheduling, and clear seams to AI
+          PDF and Slack products.
+        </p>
       ),
     },
   ];

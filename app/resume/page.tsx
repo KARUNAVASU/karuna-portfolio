@@ -13,33 +13,39 @@ import {
 
 const skills = [
   "Python",
+  "C# / .NET 9",
   "FastAPI",
-  "Django",
-  ".NET",
-  "Next.js",
+  "Hangfire",
   "React",
-  "PostgreSQL",
+  "Next.js",
+  "TypeScript",
   "SQL Server",
-  "AWS",
+  "PostgreSQL",
+  "Azure OpenAI",
+  "OCR",
+  "AWS Bedrock",
+  "Amazon Connect",
+  "Azure Key Vault",
   "Docker",
   "Selenium",
-  "Bedrock",
+  "Azure DevOps",
   "Git",
 ];
 
 const experience = [
   {
-    title: "Backend / Platform Engineer (Python Developer)",
+    title: "Software Engineer",
     company: "Integrity Healthcare Solutions Pvt Ltd",
     location: "Ahmedabad, Gujarat",
-    period: "DEC_2023 — PRESENT",
+    period: "DEC_18_2023 — PRESENT",
     accent: "border-electric-blue",
     bullets: [
-      "Automation-first workflows for US healthcare RCM (EV / Auth / Claims)",
-      "Availity integration — 95% faster claim processing turnaround",
-      "BotVeta orchestration API (.NET 9, Hangfire, FastAPI, JWT RBAC)",
-      "AWS Bedrock PDF extraction and Amazon Connect IVR automation",
-      "~60–80% reduction in manual calling effort across payer workflows",
+      "Availity + RCM pipelines — ~95% faster claim turnaround; 40–80% less manual EV/Auth/Claims effort",
+      "BotVeta / App Hub: Hangfire schedules, Audit Center, auth rate limits, product-usage, Product Weekly Update (UTC dates + comparison)",
+      "Automation Dashboard tracking 371 ADO projects (PM/SR CSM, discussions + status/color), ~118K jobs/week (84%), ~$20M charge-cost visibility",
+      "AI PDF Extractor: Appointment List / HCO tracker / Trust-PHNT-NBA superbills; validated saved_minutes → FTE KPIs",
+      "Slack Thread Tracker: auto-resolve image-only, reactions, digest emails, AI triage, SLA / analytics",
+      "Amazon Connect IVR + Bedrock — ~60–80% less manual payer calling",
     ],
   },
   {
@@ -81,8 +87,7 @@ export default function ResumePage() {
                 Karuna Vasu
               </h1>
               <p className="mb-4 font-body text-body-lg text-on-surface-variant print:text-neutral-700">
-                Backend / Platform Engineer · Python · Automation · AWS · AI
-                Systems
+                Software Engineer
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-code-sm text-on-surface-variant print:text-neutral-700">
                 <span>Mangalore, Karnataka 575003, IN</span>
@@ -162,12 +167,12 @@ export default function ResumePage() {
                 PROFESSIONAL_SUMMARY
               </h2>
               <p className="font-body text-body-md leading-relaxed text-on-surface-variant print:text-neutral-800">
-                Backend-focused Python developer with 2+ years building automation
-                platforms and orchestration systems for US Healthcare RCM. Shipped
-                BotVeta-style multi-tenant scheduling, AWS Bedrock document
-                intelligence, and production IVR workflows — cutting turnaround
-                time and manual effort across eligibility, authorization, and
-                claims operations.
+                Software Engineer with 2 years 9 months of experience building
+                multi-tenant App Hub / BotVeta systems for US Healthcare RCM
+                (since Dec 18, 2023). Scope includes .NET + Hangfire
+                orchestration, Azure OpenAI PDF→Excel, Slack SLA ops, and
+                production IVR — ~95% faster claim turnaround and 40–80% less
+                manual effort.
               </p>
             </section>
 
@@ -211,13 +216,24 @@ export default function ResumePage() {
               </h2>
               <ul className="space-y-3 font-body text-body-md text-on-surface-variant print:text-neutral-800">
                 <li>
-                  <strong className="text-on-surface print:text-black">BotVeta</strong>{" "}
-                  — multi-tenant automation orchestration (Python, .NET 9, FastAPI,
-                  Next.js, Hangfire, AWS)
+                  <strong className="text-on-surface print:text-black">BotVeta / App Hub</strong>{" "}
+                  — schedules, Audit Center, auth rate limits, product-usage,
+                  Product Weekly Update
                 </li>
                 <li>
-                  <strong className="text-on-surface print:text-black">AI PDF Extraction</strong>{" "}
-                  — healthcare RCM document pipeline with AWS Bedrock (Claude 3.5)
+                  <strong className="text-on-surface print:text-black">
+                    Automation Productivity Dashboard
+                  </strong>{" "}
+                  — 371 projects · ADO discussions/status · ~118K jobs/week ·
+                  ~$20M visibility
+                </li>
+                <li>
+                  <strong className="text-on-surface print:text-black">AI PDF Extractor</strong>{" "}
+                  — PDF→Excel + validated saved_minutes → FTE KPIs
+                </li>
+                <li>
+                  <strong className="text-on-surface print:text-black">Slack Thread Tracker</strong>{" "}
+                  — reactions, digest emails, AI triage, SLA analytics
                 </li>
                 <li>
                   <strong className="text-on-surface print:text-black">AI Voice Automation</strong>{" "}

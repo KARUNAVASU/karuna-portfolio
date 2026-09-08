@@ -27,7 +27,7 @@ export default function Resume() {
         <div className="mb-12 grid grid-cols-1 gap-stack-lg text-left md:grid-cols-3">
           <div className="border-l-2 border-primary p-4">
             <div className="mb-1 font-mono text-[10px] opacity-50">EXPERIENCE</div>
-            <div className="font-display text-headline-md">2+ Years</div>
+            <div className="font-display text-headline-md">2 yrs 9 mo</div>
           </div>
           <div className="border-l-2 border-electric-blue p-4">
             <div className="mb-1 font-mono text-[10px] opacity-50">LOCATION</div>

@@ -25,10 +25,10 @@ export function getSiteUrl() {
 
 export const SITE_URL = getSiteUrl();
 
-export const SITE_NAME = "Karuna Vasu — Backend / Platform Engineer";
+export const SITE_NAME = "Karuna Vasu — Software Engineer";
 
 export const SITE_DESCRIPTION =
-  "Backend and platform engineer building Python automation, BotVeta orchestration, AWS Bedrock AI workflows, and production RCM systems for US healthcare.";
+  "Software Engineer building BotVeta / App Hub orchestration, Azure OpenAI PDF extraction, Slack SLA ops, IVR automation, and production RCM systems for US healthcare.";
 
 export const PROFILE_IMAGE = "/profile.jpg";
 
@@ -42,7 +42,7 @@ export const IEEE_LINK = pub(
 
 export const RESUME_FILE_NAME = pub(
   process.env.NEXT_PUBLIC_RESUME_FILE_NAME,
-  "KarunaVasu_SoftwareEngineer_Resume.pdf",
+  "KarunaVasu_Resume.pdf",
 );
 
 /** Served from /public — reliable direct download on Vercel */
@@ -103,7 +103,8 @@ export const techGrid = [
   { emoji: "🔷", label: ".NET / C#", color: "text-neon-purple" },
   { emoji: "☁️", label: "AWS", color: "text-primary" },
   { emoji: "🗄️", label: "SQL SERVER", color: "text-holographic-silver" },
-  { emoji: "🧠", label: "BEDROCK", color: "text-electric-blue" },
+  { emoji: "🧠", label: "AZURE_OPENAI", color: "text-electric-blue" },
+  { emoji: "📡", label: "BEDROCK", color: "text-neon-purple" },
   { emoji: "▲", label: "NEXT.JS", color: "" },
   { emoji: "⚛️", label: "REACT", color: "" },
   { emoji: "🐳", label: "DOCKER", color: "" },
@@ -122,5 +123,9 @@ export const sitemapPaths = [
   "/",
   "/resume",
   "/projects/bot-manager",
+  "/projects/product-weekly-update",
+  "/projects/automation-dashboard",
+  "/projects/ai-pdf-extractor",
+  "/projects/slack-thread-tracker",
   "/projects/rcm-automation-suite",
 ];

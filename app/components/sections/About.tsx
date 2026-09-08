@@ -23,9 +23,9 @@ export default function About() {
           className="min-w-0 space-y-stack-lg lg:col-span-8"
         >
           <p className="font-body text-xl leading-relaxed text-on-surface md:text-[24px]">
-            Backend-focused Python developer in US Healthcare (RCM). I ship
-            scalable automation, BotVeta-style orchestration, and AI workflows
-            that cut turnaround time and manual effort.
+            Backend-focused platform engineer in US Healthcare (RCM). I ship App
+            Hub / BotVeta orchestration, AI PDF extraction, Slack SLA ops, and
+            IVR automation that cut turnaround time and manual effort.
           </p>
 
           <div className="grid grid-cols-1 gap-stack-md pt-stack-lg md:grid-cols-2">
@@ -36,16 +36,17 @@ export default function About() {
               />
               <h3 className="mb-2 font-display text-headline-md">Automation</h3>
               <p className="text-on-surface-variant">
-                Architecting scalable eligibility, authorization, and claims
-                systems across 156+ repositories.
+                Multi-tenant BotVeta control plane — instances, batches,
+                workflows, Audit Center — plus EV/Auth/Claims bots across 156+
+                repos.
               </p>
             </div>
             <div className="glass-card p-stack-lg">
               <MaterialIcon name="neurology" className="mb-4 text-neon-purple" />
               <h3 className="mb-2 font-display text-headline-md">AI Workflows</h3>
               <p className="text-on-surface-variant">
-                Integrating AWS Bedrock (Claude 3.5) for document intelligence
-                and conversational IVR platforms.
+                Azure OpenAI PDF→Excel with template RBAC; Slack AI triage +
+                SLAs; Amazon Connect IVR with Bedrock navigation.
               </p>
             </div>
           </div>
@@ -55,8 +56,8 @@ export default function About() {
               CURRENT_FOCUS
             </h4>
             <p className="font-mono text-code-sm">
-              EXTENDING_BOTVETA: Multi-tenant scheduling, monitoring, and
-              scaling of Python and Node automation.
+              EXTENDING_APP_HUB: Automation Dashboard FTE/productivity insights,
+              PDF Templates assignment, Slack SLA analytics.
             </p>
           </div>
         </motion.div>

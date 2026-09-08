@@ -11,40 +11,57 @@ interface AchievementBlock {
 
 const summaryBullets: string[] = [
   "Delivered end-to-end automation systems processing high-volume healthcare workflows with up to 95% reduction in turnaround time.",
-  "Designed and implemented a multi-tenant orchestration platform (BotVeta) supporting scalable workflow execution and monitoring.",
-  "Built and deployed AI-powered production systems using AWS Bedrock for document intelligence and IVR automation.",
+  "Designed and implemented a multi-tenant App Hub / BotVeta orchestration platform with Hangfire scheduling and JWT RBAC.",
+  "Built AI PDF→Excel (Azure OpenAI + OCR) and Slack SLA triage; shipped Amazon Connect IVR with Bedrock.",
   "Developed distributed, fault-tolerant backend systems with queue-based execution, retry handling, and real-time orchestration.",
 ];
 
 const blocks: AchievementBlock[] = [
   {
-    title: "BotVeta — Automation Orchestration Platform",
+    title: "BotVeta — App Hub Automation Platform",
     badge: "Flagship",
     bullets: [
-      "Multi-tenant platform for scheduling, monitoring, and managing distributed automation workflows.",
-      "Architecture: Orchestration APIs → Scheduler → Bot Runners → Centralized logging & monitoring.",
-      "Supports queue-based execution, retry handling, failure recovery, and workflow orchestration.",
+      "Multi-tenant platform: instances, batches, timezone-aware workflow schedules, Audit Center templates + copy-process.",
+      "Auth rate limits on login/OTP; org app requests / product-usage; Product Weekly Update (UTC date ranges + comparison).",
+      "Architecture: React portal → .NET 9 BFF/Worker (Hangfire) → SQL · JWT RBAC · Azure Key Vault.",
     ],
     tech: [
       "Python",
       "FastAPI",
-      ".NET",
+      ".NET 9",
+      "Hangfire",
       "React",
       "Next.js",
       "SQL Server",
-      "PostgreSQL",
-      "AWS",
-      "Docker",
+      "Azure Key Vault",
     ],
   },
   {
-    title: "AI-Powered PDF Extraction & Document Intelligence System",
+    title: "Product Weekly Update (Board Pack)",
     bullets: [
-      "AI-driven document processing system for extracting structured data from unstructured healthcare PDFs.",
-      "Implements document splitting, grouping, and validation using rule-based logic with AI confidence scoring.",
-      "Integrates AWS Bedrock (Claude) for LLM-based extraction.",
+      "Monday leadership briefing: date ranges, DAU, productivity hours, PDF volume, audit queue + report comparison.",
+      "Editable narrative + client-side jsPDF board pack from loaded metrics (no second fetch).",
+      "Next.js admin → .NET admin-api aggregations across App Hub products.",
     ],
-    tech: ["Python", "FastAPI", "AWS Bedrock", "LLMs"],
+    tech: ["Next.js", ".NET 9", "jsPDF", "TypeScript", "SQL Server"],
+  },
+  {
+    title: "Automation Productivity Dashboard",
+    bullets: [
+      "Projects tab: BU cards, PM/SR CSM, ADO discussions + status/color; Business/Automation/PDF/Audit insights with BU JWT (371 projects; ~194 FTEs).",
+      "Sample windows: ~118K jobs/week at 84% success; 2,770 FTE sent (~$20.12M); PDF 29.4h / 95 docs; Audit 77.8% on 1.9K items.",
+      "Productivity model: validated saved_minutes → hours → man-days/FTE (8h day).",
+    ],
+    tech: ["React", "Recharts", ".NET 9", "FastAPI", "SQL Server", "Azure DevOps"],
+  },
+  {
+    title: "AI PDF Extractor (Template → Excel)",
+    bullets: [
+      "Template-driven PDF/JSON → Excel with Azure OpenAI, RapidOCR, and deterministic parsers.",
+      "Production templates: Appointment List / Detailed App List, HCO Payer & Amount Tracker, Trust/PHNT/NBA superbills.",
+      "Execute validates saved_minutes_total (min 15 when set) and persists FTE productivity metrics.",
+    ],
+    tech: ["Python", "FastAPI", "Azure OpenAI", "RapidOCR", "React", ".NET"],
   },
   {
     title: "AI Voice Automation Platform (IVR + Amazon Connect)",
@@ -56,6 +73,15 @@ const blocks: AchievementBlock[] = [
     tech: ["Python", "REST APIs", "Amazon Connect", "AWS"],
   },
   {
+    title: "Slack Thread Tracker (SLA + AI Triage)",
+    bullets: [
+      "Signed Slack Events ingestion with multimodal Azure OpenAI classification (EV/Auth/other).",
+      "Auto-resolve image-only messages; reaction-driven RESOLVED/ANSWERED; pre-shift digest emails.",
+      "APScheduler SLA engine; assignment-scoped queues, analytics, and CSV reports.",
+    ],
+    tech: ["Python", "FastAPI", "Slack API", "Azure OpenAI", "APScheduler"],
+  },
+  {
     title: "RCM Automation Suite (Eligibility — Authorization — Claims)",
     bullets: [
       "Automation platform for eligibility, authorization, and claims workflows.",
@@ -63,22 +89,6 @@ const blocks: AchievementBlock[] = [
       "40–80% reduction in repetitive effort.",
     ],
     tech: ["Python", "Selenium", "Pandas", "SQL"],
-  },
-  {
-    title: "Slack-Based Workflow Automation System",
-    bullets: [
-      "Event-driven system for triggering and monitoring workflows via Slack.",
-      "Uses APIs and webhooks for real-time execution.",
-    ],
-    tech: ["Python", "FastAPI", "Slack API"],
-  },
-  {
-    title: "AI Bots & Utility Systems",
-    bullets: [
-      "Built conversational bots (Telegram/WhatsApp) using LLMs.",
-      "Developed audio transcription pipelines using OpenAI APIs.",
-    ],
-    tech: ["Python", "OpenAI APIs", "Flask"],
   },
 ];
 
