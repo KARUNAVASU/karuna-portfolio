@@ -13,8 +13,8 @@ alwaysApply: true
 ## Public assets
 - `public/profile.jpg` — your photo
 - `public/KarunaVasu_Resume.pdf` — designed resume (site download)
-- Optional: `public/KarunaVasu_Resume_ATS.pdf`
-- Do **not** keep parallel designed resumes (`*_Updated_AppHub.pdf`, old Python Developer PDFs)
+- Do **not** keep parallel designed resumes (`*_Updated_AppHub.pdf`, ATS duplicates, old Python Developer PDFs)
+- Keep resume generators / fonts / photo source outside this repo (`Desktop/KV`), not in git
 
 ## README
 - Short personal landing (live URL + role). No “how to run / deploy” tutorials for strangers.

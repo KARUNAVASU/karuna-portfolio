@@ -12,7 +12,7 @@ This repo is a **public personal portfolio**. Treat every commit as world-readab
 - Passwords, tokens, PATs, cookies, private keys (`*.pem`, `*.key`, `credentials.json`)
 - Screenshots or exports that show live internal URLs, customer PHI, or employee PII beyond your own public profile
 - CHI / Client Happiness Index product details (keep private)
-- Duplicate or draft resume PDFs — only `public/KarunaVasu_Resume.pdf` (and optional ATS) belong in `public/`
+- Duplicate or draft resume PDFs — only `public/KarunaVasu_Resume.pdf` belongs in `public/`
 
 ## Safe to commit
 - Portfolio source (`app/`), styles, public profile photo
