@@ -37,8 +37,8 @@ export default function SlackThreadTrackerCaseStudy() {
               seed first-reply SLA timing
             </li>
             <li>
-              Per-workspace bot tokens &amp; signing secrets stored in SQL
-              Server
+              Per-workspace Slack credentials managed server-side (not in the
+              portfolio or browser)
             </li>
             <li>
               AI classification: EV / Auth / other — keyword fast-path or

@@ -1,0 +1,30 @@
+---
+description: Portfolio security — no secrets, no company creds, public-safe only
+alwaysApply: true
+---
+
+# Portfolio security & hygiene
+
+This repo is a **public personal portfolio**. Treat every commit as world-readable.
+
+## Never commit
+- `.env.local` or any real `NEXT_PUBLIC_*` values that point to **internal** company systems (App Hub, Azure DevOps PATs, Key Vault, connection strings)
+- Passwords, tokens, PATs, cookies, private keys (`*.pem`, `*.key`, `credentials.json`)
+- Screenshots or exports that show live internal URLs, customer PHI, or employee PII beyond your own public profile
+- CHI / Client Happiness Index product details (keep private)
+- Duplicate or draft resume PDFs — only `public/KarunaVasu_Resume.pdf` (and optional ATS) belong in `public/`
+
+## Safe to commit
+- Portfolio source (`app/`), styles, public profile photo
+- `.env.example` with **empty** placeholders only
+- Public contact (email/GitHub/LinkedIn) you already show on the live site
+- Case-study narrative and architecture at a high level (no hostnames, no secrets, no customer identifiers)
+
+## Product demo URLs
+- `NEXT_PUBLIC_BOTVETA_*` / `NEXT_PUBLIC_IVR_*` stay **env-only** with empty defaults in code
+- Prefer case-study pages over linking to internal production App Hub
+
+## Before every push
+1. `git status` — no `.env.local`, no unexpected binaries
+2. Confirm download resume is Software Engineer (`KarunaVasu_Resume.pdf`)
+3. Do not force-push `main` unless explicitly requested

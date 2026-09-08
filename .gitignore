@@ -55,12 +55,21 @@ ehthumbs.db
 *.swo
 *~
 
-# Certificates / keys / secrets
+# Certificates / keys / secrets / credentials
 *.pem
 *.key
 *.p12
+*.pfx
+*.cer
+*.crt
 credentials.json
 service-account*.json
+**/secrets/**
+**/*credentials*.json
+
+# Azure / cloud local auth artifacts
+.azure/
+*.publishsettings
 
 # Agent / local scratch (never push)
 temp-reference.html
@@ -79,6 +88,10 @@ show-tree.mjs
 list-public.mjs
 *.tmp
 *.bak
+*.orig
 
-# Duplicate resume at repo root — only public/ copy is shipped
-/KarunaVasu_SoftwareEngineer_Resume.pdf
+# Resume generators live outside this repo — never commit root copies or drafts
+/KarunaVasu_*.pdf
+/_resume*
+/resume_fonts/
+/generate_resume*.py

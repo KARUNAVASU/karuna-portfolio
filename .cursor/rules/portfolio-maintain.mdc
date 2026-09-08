@@ -1,0 +1,23 @@
+---
+description: Keep portfolio repo lean — no build junk, one resume PDF source
+alwaysApply: true
+---
+
+# Portfolio repo maintenance
+
+## Keep lean
+- Never commit `.next/`, `node_modules/`, `.vercel/`, `next-env.d.ts`, or `*.tsbuildinfo`
+- Do not add App Hub / company monorepo code into this portfolio
+- Prefer editing content in `app/data/*` over scattering copy across components
+
+## Public assets
+- `public/profile.jpg` — your photo
+- `public/KarunaVasu_Resume.pdf` — designed resume (site download)
+- Optional: `public/KarunaVasu_Resume_ATS.pdf`
+- Do **not** keep parallel designed resumes (`*_Updated_AppHub.pdf`, old Python Developer PDFs)
+
+## README
+- Short personal landing (live URL + role). No “how to run / deploy” tutorials for strangers.
+
+## Designation
+- Official title in UI and resume copy: **Software Engineer**
